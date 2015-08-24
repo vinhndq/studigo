@@ -48,7 +48,7 @@ section {
 ==================================*/
 .navbar-default {
     background-color: rgba(64, 130, 97,0.75);
-    border-color: transparent;
+    border: none;
     color: #fff;
     min-height: 80px;
 }
@@ -72,8 +72,16 @@ section {
 ==================================*/
 
 /*STYLE OF BACKGROUND IMAGE*/
+#welcome-page{
+	 background: url(../images/home.png) no-repeat center center; /*Full Witdth background image*/
+	  padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    min-height: 600px;
+}
 #home {
-    background: url(../images/home.png) no-repeat center center; /*Full Witdth background image*/
+   
     padding: 0;
     -webkit-background-size: cover;
     background-size: cover;
@@ -193,7 +201,7 @@ footer {
     font-size: 15px;
     text-align: center;
     font-weight: 900;
-    background-color: rgb(64, 130, 97);
+    background-color: rgba(64, 130, 97,0.75);
     color: #fff;
 }
 

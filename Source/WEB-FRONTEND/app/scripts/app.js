@@ -1,11 +1,25 @@
 'use strict';
 
-angular.module('testApp', ['ui.bootstrap'])
+/**
+ * @ngdoc overview
+ * @name studigoApp
+ * @description
+ * # studigoApp
+ *
+ * Main module of the application.
+ */
+angular
+  .module('studigoApp', [
+    'ngCookies',
+    'ngResource',
+    'ngRoute'
+  ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/welcome-page.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
       })
       .otherwise({
         redirectTo: '/'

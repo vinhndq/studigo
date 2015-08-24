@@ -1,61 +1,47 @@
-﻿<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <!--[if IE]>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <![endif]-->
-    <title>Free bootstrap corporate template</title>
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link href="styles/bootstrap.css" rel="stylesheet" />
-    <!-- CUSTOM STYLES -->
-    <link href="styles/style.css" rel="stylesheet" />
-	<!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="studigoApp" id="welcome-page">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <!-- Add your site or application content here -->
+	<div ng-include="'views/header.html'"></div>
 
-</head>
-<body ng-app="studigoApp">
-    <div ng-include="template/header.html"></div>
-    <!-- NAVBAR CODE END -->
-    <div id="home">
-        <div class="overlay">
-            <!-- overylay class usage -->
-            <div class="container content">
-                <div class="col-md-7">
-                    <img src="images/top-member.png" class="img-responsive"/>
-                </div>
-                <div class="col-md-4 welcome-text" >
-                  <p>
-                    <div class="row">We inspire your English learning Anywhere, Anytime for Free</div>
-                  </p>
-                  <br/>
-                  <p>
-                    <div class="row" style="text-align:center;display:  inline-block;">  <img src="images/btn-join.png" class="img-responsive"/></div>
-                  </p>
-                  <div class="row" style="text-align:center;font-size:30px">Sign up with <a href="#"><img src="images/logo-facebook.png"/></a> or <a href="#"><img src="images/logo-google-plus.png"/></a></div>
-                </div>
-            </div>
-        </div>
-
+    <div class="container">
+    <div ng-view=""></div>
     </div>
 
-    <div ng-include="template/footer.html"></div>
-
-
-    <script src="components/jquery/dist/jquery.min.js"></script>
+   <div ng-include="'views/footer.html'"></div>
+  <div ng-include="'views/login-dialog.html'"></div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="components/jquery/dist/jquery.js"></script>
     <script src="components/angular/angular.js"></script>
-	<script src="components/angular-resource/angular-resource.js"></script>
-	<script src="components/angular-bootstrap/ui-bootstrap.min.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+    <script src="components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="components/angular-cookies/angular-cookies.js"></script>
+    <script src="components/angular-resource/angular-resource.js"></script>
+    <script src="components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <!-- endbuild -->
 </body>
-
 </html>
