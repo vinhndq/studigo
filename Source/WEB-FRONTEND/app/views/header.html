@@ -1,16 +1,17 @@
 <div class="navbar navbar-default navbar-fixed-top">
-    <div class="container" style="vertical-align:middle">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <div class="container header-bar">
+        <div class="navbar-header"  >
+
+            <a class="navbar-brand" href="#">
+                <img src="../images/studigo-logo.png" alt="" class="img-logo"/>
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
-                <img src="../images/studigo-logo.png" alt="" class="img-responsive"/>
-            </a>
         </div>
-        <div class="navbar-collapse collapse navbar-right scroll-me">
+        <div class="navbar-collapse collapse navbar-right scroll-me" >
             <ul class="nav navbar-nav ">
                 <li><a href="">HOME</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#login-dialog">LOGIN</a></li>
@@ -18,6 +19,6 @@
         </div>
 
     </div>
-	
+
 </div>
 <div ng-include="'views/login-dialog.html'"></div>
