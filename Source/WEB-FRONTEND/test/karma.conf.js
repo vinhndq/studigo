@@ -28,6 +28,7 @@ module.exports = function(config) {
       'app/components/angular-cookies/angular-cookies.js',
       'app/components/angular-resource/angular-resource.js',
       'app/components/angular-route/angular-route.js',
+      'app/components/bootstrap-popover-x/js/bootstrap-popover-x.min.js',
       'app/components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

@@ -8,11 +8,16 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="components/bootstrap-popover-x/css/bootstrap-popover-x.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <link rel="stylesheet" href="styles/style.css">
+    <link href="components/bootstrap-popover-x/css/bootstrap-popover-x.css" media="all" rel="stylesheet" type="text/css" />
     <!-- endbuild -->
+    <script src="components/jquery/dist/jquery.min.js"></script>
+    <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="components/bootstrap-popover-x/js/bootstrap-popover-x.min.js"></script>
   </head>
   <body ng-app="studigoApp" id="welcome-page">
     <!--[if lte IE 8]>
@@ -26,22 +31,64 @@
     <div ng-view=""></div>
     </div>
 
+    <a href="#login-dialog" data-toggle="popover-x"  data-placement="top" >LOGIN</a>
+    <form class="form-horizontal" role="form">
+        <div id="login-dialog" class="popover popover-success">
+          <div class="arrow"></div>
+          <div class="popover-title"><span class="close" data-dismiss="popover-x">&times;</span>Login</div>
+          <div class="popover-content">
+
+
+
+
+              <div class="form-group">
+                <label class="control-label col-sm-3 " for="username">Username:</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="username" placeholder="Enter User name">
+                </div>
+              </div>
+              <div class="form-group margin-bottom">
+                <label class="control-label col-sm-3 " for="pwd">Password:</label>
+                <div class="col-sm-9">
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+              </div>
+              <div class="form-group margin-bottom">
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-success btn-block">Login</button>
+                </div>
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-primary btn-link pull-right">Forgot password?</button>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <button type="button" class="btn btn-warning btn-block">Create a Profile</button>
+                </div>
+
+              </div>
+          </div>
+
+        </div>
+      </form>
+
    <div ng-include="'views/footer.html'"></div>
-  
+
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="components/jquery/dist/jquery.js"></script>
+
     <script src="components/angular/angular.js"></script>
-    <script src="components/bootstrap/dist/js/bootstrap.js"></script>
+
     <script src="components/angular-cookies/angular-cookies.js"></script>
     <script src="components/angular-resource/angular-resource.js"></script>
     <script src="components/angular-route/angular-route.js"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

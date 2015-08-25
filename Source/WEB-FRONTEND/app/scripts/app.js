@@ -16,12 +16,12 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/index', {
         templateUrl: 'views/welcome-page.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/index'
       });
   });

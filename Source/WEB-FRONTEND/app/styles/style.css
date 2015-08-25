@@ -54,28 +54,27 @@ section {
   }
   .img-logo
   {
-    margin:8px 0 0 0 !important;
+    margin:8px 0 0 10px !important;
     height: 60%;
     width:60%;
   }
-  .container
-  {
-    min-width: 300px;
-  }
+
 }
-@media screen and (max-width:1200px)
+
+.header-bar
 {
-  .header-bar
-  {
-    min-height: 80px;
-  }
-  .img-logo
-  {
-    margin:10px 0 0 0;
-  }
-
+  min-height: 80px;
+}
+.img-logo
+{
+  margin:10px 0 0 25px;
 }
 
+
+.container
+{
+  min-width: 300px !important;
+}
 .navbar-default {
     background-color: rgba(64, 130, 97,0.75);
     border: none;
@@ -235,7 +234,22 @@ footer {
     color: #fff;
 }
 
-    footer a, footer a:hover {
-        color: #fff;
-        text-decoration: none;
-    }
+footer a, footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+#login-dialog .modal{
+  position: absolute;
+}
+#login-dialog .modal-dialog
+{
+  max-width: 320px;
+}
+#login-dialog .margin-bottom
+{
+  margin-bottom:30px;
+}
+#login-dialog .margin-top
+{
+  margin-top:25px;
+}
