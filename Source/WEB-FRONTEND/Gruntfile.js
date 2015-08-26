@@ -30,7 +30,14 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
-
+    //gettext
+    nggettext_extract: {
+      pot: {
+        files: {
+          'po/template.pot': ['app/views/*.html']
+        }
+      },
+    },
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -405,7 +412,9 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
-    }
+    },
+
+
   });
 
 
@@ -461,4 +470,5 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+  grunt.loadNpmTasks('grunt-angular-gettext');
 };

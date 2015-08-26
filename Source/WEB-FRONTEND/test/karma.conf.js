@@ -24,10 +24,13 @@ module.exports = function(config) {
       // bower:js
       'app/components/jquery/dist/jquery.js',
       'app/components/angular/angular.js',
-      'app/components/bootstrap/dist/js/bootstrap.js',
       'app/components/angular-cookies/angular-cookies.js',
+      'app/components/angular-gettext/dist/angular-gettext.js',
       'app/components/angular-resource/angular-resource.js',
       'app/components/angular-route/angular-route.js',
+      'app/components/angular-translate/angular-translate.js',
+      'app/components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+      'app/components/bootstrap/dist/js/bootstrap.js',
       'app/components/bootstrap-popover-x/js/bootstrap-popover-x.min.js',
       'app/components/angular-mocks/angular-mocks.js',
       // endbower

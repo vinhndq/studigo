@@ -9,5 +9,5 @@
  */
 angular.module('studigoApp')
   .controller('MainCtrl', function () {
-   
+
   });

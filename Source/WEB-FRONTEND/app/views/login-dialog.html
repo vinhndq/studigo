@@ -1,39 +1,48 @@
-  <form class="form-horizontal" role="form">
-      <div id="login-dialog" class="popover popover-success">
-        <div class="arrow"></div>
-        <div class="popover-title"><span class="close" data-dismiss="popover-x">&times;</span>Login</div>
-        <div class="popover-content">
-
-
-
-
-            <div class="form-group">
-              <label class="control-label col-sm-3 " for="username">Username:</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" id="username" placeholder="Enter User name">
-              </div>
-            </div>
-            <div class="form-group margin-bottom">
-              <label class="control-label col-sm-3 " for="pwd">Password:</label>
-              <div class="col-sm-9">
-                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-              </div>
-            </div>
-            <div class="form-group margin-bottom">
-              <div class="col-sm-12">
-                <button type="submit" class="btn btn-success btn-block">Login</button>
-              </div>
-              <div class="col-sm-12">
-                <button type="submit" class="btn btn-primary btn-link pull-right">Forgot password?</button>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-12">
-                <button type="button" class="btn btn-warning btn-block">Create a Profile</button>
-              </div>
-
-            </div>
-        </div>
-
+<div id="login-dialog" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login</h4>
       </div>
-    </form>
+      <div class="modal-body">
+        <form name="loginForm" class="form-horizontal" role="form" ng-controller="LoginCtrl" ng-submit="submit()">
+
+          <div class="form-group" ng-class="{ 'has-error': loginForm.username.$dirty && loginForm.username.$error.required }">
+            <label class="control-label col-sm-3 " for="username">Username:</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="username" name="username" ng-model="username" require placeholder="Enter User name">
+            </div>
+            <span ng-show="loginForm.username.$dirty && loginForm.username.$error.required" class="col-sm-9 col-sm-offset-3 help-block">
+                Username is required
+            </span>
+
+          </div>
+          <div class="form-group margin-bottom" ng-class="{ 'has-error': loginForm.pwd.$dirty && loginForm.pwd.$error.required }">
+            <label class="control-label col-sm-3 " for="pwd">Password:</label>
+            <div class="col-sm-9">
+              <input type="password" class="form-control" id="pwd" name="pwd" ng-model="password" require placeholder="Enter password">
+            </div>
+            <span ng-show="loginForm.pwd.$dirty && loginForm.pwd.$error.required" class="col-sm-9 col-sm-offset-3 help-block">
+                Password is required
+            </span>
+          </div>
+          <div class="form-group margin-bottom">
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-success btn-block">Login</button>
+            </div>
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-primary btn-link pull-right">Forgot password?</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <button type="button" class="btn btn-warning btn-block">Create a Profile</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
