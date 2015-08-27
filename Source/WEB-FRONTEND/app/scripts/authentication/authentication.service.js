@@ -24,7 +24,8 @@
                 UserService.GetByLogin(username,password)
                     .then(function (data) {
                         if (data.status='true') {
-                            response = { success: true , user:data.userData};
+                          console.log(data);
+                            response = { success: true , user:data.userData.username};
                         } else {
                             response = { success: false, message: 'Username or password is incorrect' };
                         }

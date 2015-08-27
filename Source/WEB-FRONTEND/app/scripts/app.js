@@ -18,8 +18,8 @@ angular
   ])
   .config(config)
   .run(run);
-  config.$inject = ['$routeProvider', '$locationProvider'];
-  function config($routeProvider, $locationProvider) {
+  config.$inject = ['$routeProvider', '$locationProvider','$httpProvider'];
+  function config($routeProvider, $locationProvider,$httpProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -38,7 +38,7 @@ angular
         redirectTo: '/welcome-page'
       });
 
-
+      $httpProvider.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
   }
   run.$inject = ['$rootScope', '$location', '$cookieStore', '$http','gettext'];
   function run($rootScope, $location, $cookieStore, $http,gettextCatalog) {

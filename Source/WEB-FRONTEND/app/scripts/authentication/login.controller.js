@@ -25,10 +25,11 @@
          $scope.login = function () {
              console.log('before login');
              vm.dataLoading = true;
-             AuthenticationService.Login(vm.username, vm.password, function (response) {
+             AuthenticationService.Login($scope.username, $scope.password, function (response) {
                  if (response.success) {
                      console.log('success');
                      AuthenticationService.SetCredentials(vm.username, vm.password);
+                     console.log(response);
                      $scope.user = response.user;
                      $location.path('/');
                  } else {
