@@ -13,7 +13,8 @@ angular
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'gettext'
+    'gettext',
+    'ui.bootstrap'
   ])
   .config(config)
   .run(run);
@@ -39,8 +40,8 @@ angular
 
 
   }
-  run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];
-  function run($rootScope, $location, $cookieStore, $http) {
+  run.$inject = ['$rootScope', '$location', '$cookieStore', '$http','gettext'];
+  function run($rootScope, $location, $cookieStore, $http,gettextCatalog) {
       // keep user logged in after page refresh
       $rootScope.globals = $cookieStore.get('globals') || {};
       if ($rootScope.globals.currentUser) {
@@ -55,4 +56,6 @@ angular
               $location.path('/welcome-page');
           }
       });
+      gettextCatalog.currentLanguage='en';
+      gettextCatalog.debug=true;
   }

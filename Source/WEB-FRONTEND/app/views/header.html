@@ -1,4 +1,4 @@
-<div class="navbar navbar-default navbar-fixed-top">
+<div class="navbar navbar-default navbar-fixed-top" ng-controller="MenuCtrl">
     <div class="container header-bar">
         <div class="navbar-header"  >
 
@@ -13,8 +13,8 @@
         </div>
         <div class="navbar-collapse collapse navbar-right scroll-me" >
             <ul class="nav navbar-nav ">
-                <li><a href="/" >{{'HOME'|translate}}</a></li>
-                <li><a href="" data-toggle="modal" data-target="#login-dialog" >LOGIN</a></li>
+                <li><a href="/" translate >HOME</a></li>
+                <li><a href="" ng-click="openLoginDialog()" >LOGIN</a></li>
 
             </ul>
         </div>

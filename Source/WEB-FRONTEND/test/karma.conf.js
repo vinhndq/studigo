@@ -32,6 +32,7 @@ module.exports = function(config) {
       'app/components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
       'app/components/bootstrap/dist/js/bootstrap.js',
       'app/components/bootstrap-popover-x/js/bootstrap-popover-x.min.js',
+      'app/components/angular-bootstrap/ui-bootstrap-tpls.js',
       'app/components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

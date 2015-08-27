@@ -1,12 +1,13 @@
-<div id="login-dialog" class="modal fade" role="dialog">
+<div  class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <script type="text/ng-template" id="login-dialog.html"
+    <div class="modal-content login-dialog">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
         <h4 class="modal-title">Login</h4>
       </div>
       <div class="modal-body">
-        <form name="loginForm" class="form-horizontal" role="form" ng-controller="LoginCtrl" ng-submit="submit()">
+        <form name="loginForm" class="form-horizontal" role="form">
 
           <div class="form-group" ng-class="{ 'has-error': loginForm.username.$dirty && loginForm.username.$error.required }">
             <label class="control-label col-sm-3 " for="username">Username:</label>
@@ -29,10 +30,10 @@
           </div>
           <div class="form-group margin-bottom">
             <div class="col-sm-12">
-              <button type="submit" class="btn btn-success btn-block">Login</button>
+              <button type="button" class="btn btn-success btn-block" ng-click="login()">Login</button>
             </div>
             <div class="col-sm-12">
-              <button type="submit" class="btn btn-primary btn-link pull-right">Forgot password?</button>
+              <button type="button" class="btn btn-primary btn-link pull-right">Forgot password?</button>
             </div>
           </div>
           <div class="form-group">
@@ -44,5 +45,6 @@
         </form>
       </div>
     </div>
+    </script>
   </div>
 </div>

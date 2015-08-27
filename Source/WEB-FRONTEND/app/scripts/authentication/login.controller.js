@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc function
- * @name studigoApp.controller:MainCtrl
+ * @name studigoApp.controller:LoginCtrl
  * @description
  * # LoginCtrl
  * Controller of the studigoApp
@@ -11,18 +11,19 @@
          .module('studigoApp')
          .controller('LoginCtrl', LoginController);
 
-     LoginController.$inject = ['$location', 'AuthenticationService', 'FlashService'];
-     function LoginController($location, AuthenticationService, FlashService) {
+     LoginController.$inject = ['$scope','$modal','$location', 'AuthenticationService', 'FlashService'];
+     function LoginController($scope,$modal,$location, AuthenticationService, FlashService) {
          var vm = this;
 
          vm.login = login;
 
          (function initController() {
              // reset login status
-             AuthenticationService.ClearCredentials();
+             AuthenticationService.ClearCredentials;
          })();
 
          function login() {
+             console.log('before login');
              vm.dataLoading = true;
              AuthenticationService.Login(vm.username, vm.password, function (response) {
                  if (response.success) {
