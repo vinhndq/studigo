@@ -15,21 +15,24 @@
      function LoginController($scope,$modal,$location, AuthenticationService, FlashService) {
          var vm = this;
 
-         vm.login = login;
+
 
          (function initController() {
              // reset login status
              AuthenticationService.ClearCredentials;
          })();
 
-         function login() {
+         $scope.login = function () {
              console.log('before login');
              vm.dataLoading = true;
              AuthenticationService.Login(vm.username, vm.password, function (response) {
                  if (response.success) {
+                     console.log('success');
                      AuthenticationService.SetCredentials(vm.username, vm.password);
+                     $scope.user = response.user;
                      $location.path('/');
                  } else {
+                   console.log('failure');
                      FlashService.Error(response.message);
                      vm.dataLoading = false;
                  }

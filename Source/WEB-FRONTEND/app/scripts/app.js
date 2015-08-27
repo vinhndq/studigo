@@ -22,8 +22,8 @@ angular
   function config($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/home.html',
-        controller: 'HomeCtrl',
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
         controllerAs: 'main'
       })
       .when('/welcome-page', {
