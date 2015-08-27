@@ -38,10 +38,11 @@ angular
         redirectTo: '/welcome-page'
       });
 
-      $httpProvider.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+
   }
-  run.$inject = ['$rootScope', '$location', '$cookieStore', '$http','gettext'];
-  function run($rootScope, $location, $cookieStore, $http,gettextCatalog) {
+  run.$inject = ['$rootScope', '$location', '$cookieStore', '$http','gettext','$cookies'];
+  function run($rootScope, $location, $cookieStore, $http,gettextCatalog,$cookies) {
+       $http.defaults.headers.post['X-CSRFToken'] = $cookies.csrftoken;
       // keep user logged in after page refresh
       $rootScope.globals = $cookieStore.get('globals') || {};
       if ($rootScope.globals.currentUser) {
@@ -58,4 +59,5 @@ angular
       });
       gettextCatalog.currentLanguage='en';
       gettextCatalog.debug=true;
+      $http.defaults.useXDomain = true;
   }

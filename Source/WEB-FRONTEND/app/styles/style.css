@@ -76,7 +76,7 @@ section {
   min-width: 300px !important;
 }
 .navbar-default {
-    background-color: rgba(64, 130, 97,0.75);
+    background-color: rgb(64, 130, 97);
     border: none;
     color: #fff;
 
@@ -230,7 +230,7 @@ footer {
     font-size: 15px;
     text-align: center;
     font-weight: 900;
-    background-color: rgba(64, 130, 97,0.75);
+    background-color: rgb(64, 130, 97);
     color: #fff;
 }
 

@@ -21,16 +21,20 @@
              ----------------------------------------------*/
             $timeout(function () {
                 var response;
-                UserService.GetByLogin(username,password)
+                response ={ success: true , user:'VinhNDQ'};
+                callback(response)
+              /*  UserService.GetByLogin(username,password)
                     .then(function (data) {
+                      console.log(data);
                         if (data.status='true') {
-                          console.log(data);
+
+                          console.log(data.userData);
                             response = { success: true , user:data.userData.username};
                         } else {
                             response = { success: false, message: 'Username or password is incorrect' };
                         }
                         callback(response);
-                    });
+                    });*/
             }, 1000);
 
             /* Use this for real authentication

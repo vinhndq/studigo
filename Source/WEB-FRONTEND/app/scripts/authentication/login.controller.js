@@ -32,6 +32,7 @@
                      console.log(response);
                      $scope.user = response.user;
                      $location.path('/');
+                     $scope.actionTemplate="views/start-tour.html";
                  } else {
                    console.log('failure');
                      FlashService.Error(response.message);
