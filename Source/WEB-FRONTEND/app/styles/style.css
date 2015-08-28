@@ -101,13 +101,22 @@ section {
 ==================================*/
 
 /*STYLE OF BACKGROUND IMAGE*/
-#welcome-page{
+.welcome-body{
 	 background: url(../images/home.png) no-repeat center center; /*Full Witdth background image*/
 	  padding: 0;
     -webkit-background-size: cover;
     background-size: cover;
     -moz-background-size: cover;
     min-height: 600px;
+}
+.main-body
+{
+  background-color:#e9ece5;
+   padding: 0;
+   -webkit-background-size: cover;
+   background-size: cover;
+   -moz-background-size: cover;
+   min-height: 600px;
 }
 #home {
 
@@ -252,4 +261,25 @@ footer a, footer a:hover {
 .login-dialog .margin-top
 {
   margin-top:25px;
+}
+
+.header-area
+{
+  height:10%;
+  padding-top: 20px;
+}
+.action-area
+{
+  height:75%;
+  padding: 20px;
+}
+.footer-area
+{
+  height:15%;
+  padding-top: 25px;
+  background-color: #dbe9d8
+}
+.action-frame
+{
+  padding: 50px;
 }

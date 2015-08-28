@@ -1,3 +1,4 @@
+'use strict';
 angular.module('studigoApp').controller('MenuCtrl', function ($scope, $modal, $log) {
 
   $scope.openLoginDialog = function () {

@@ -13,5 +13,7 @@
 
      MainController.$inject = ['$scope','$location', '$http'];
      function MainController($scope,$location,$http) {
+
           console.log('go to Homepage');
+          console.log($scope.params)
      }

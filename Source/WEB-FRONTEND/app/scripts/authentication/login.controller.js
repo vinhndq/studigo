@@ -31,8 +31,8 @@
                      AuthenticationService.SetCredentials(vm.username, vm.password);
                      console.log(response);
                      $scope.user = response.user;
-                     $location.path('/');
-                     $scope.actionTemplate="views/start-tour.html";
+                     $location.path('/start-tour/first-step/');
+
                  } else {
                    console.log('failure');
                      FlashService.Error(response.message);

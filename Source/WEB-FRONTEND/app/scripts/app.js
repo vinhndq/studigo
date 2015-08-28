@@ -30,9 +30,14 @@ angular
         templateUrl: 'views/welcome-page.html',
       })
       .when('/register', {
-                controller: 'RegisterController',
+                controller: 'RegisterCtrl',
                 templateUrl: 'views/register.html',
                 controllerAs: 'reg'
+      })
+      .when('/start-tour/:step', {
+                controller: 'StartTourCtrl',
+                templateUrl: 'views/start-tour.html',
+                controllerAs: 'startTour'
       })
       .otherwise({
         redirectTo: '/welcome-page'
@@ -56,7 +61,16 @@ angular
           if (restrictedPage && !loggedIn) {
               $location.path('/welcome-page');
           }
+          restrictedPage = $.inArray($location.path(), ['/welcome-page']) === -1;
+          if(restrictedPage)
+          {
+            $rootScope.bodylayout='main-body';
+          }
+          else {
+            $rootScope.bodylayout='welcome-body';
+          }
       });
+
       gettextCatalog.currentLanguage='en';
       gettextCatalog.debug=true;
       $http.defaults.useXDomain = true;
