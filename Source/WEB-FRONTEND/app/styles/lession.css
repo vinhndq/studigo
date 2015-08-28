@@ -1,0 +1,19 @@
+.word
+{
+
+}
+.word-description
+{
+
+}
+
+.record-lesson .wave
+{
+  height: 85px;
+}
+.record-lesson .control-icon img{
+  width: 48px;
+  height: 48px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}

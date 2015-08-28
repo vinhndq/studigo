@@ -34,6 +34,8 @@ module.exports = function(config) {
       'app/components/bootstrap-popover-x/js/bootstrap-popover-x.min.js',
       'app/components/angular-bootstrap/ui-bootstrap-tpls.js',
       'app/components/angular-easyfb/angular-easyfb.js',
+      'app/components/Chart.js/Chart.js',
+      'app/components/angular-chart.js/dist/angular-chart.js',
       'app/components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

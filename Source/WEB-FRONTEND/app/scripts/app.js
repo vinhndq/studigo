@@ -14,7 +14,7 @@ angular
     'ngResource',
     'ngRoute',
     'gettext',
-    'ui.bootstrap'
+    'ui.bootstrap','chart.js'
   ])
   .config(config)
   .run(run);
