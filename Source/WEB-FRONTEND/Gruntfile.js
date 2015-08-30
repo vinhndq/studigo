@@ -38,6 +38,13 @@ module.exports = function (grunt) {
         }
       },
     },
+    nggettext_compile: {
+            all: {
+                files: {
+                    'app/scripts/common/translations.js': ['po/*.po']
+                }
+            }
+    },
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -471,4 +478,6 @@ module.exports = function (grunt) {
     'build'
   ]);
   grunt.loadNpmTasks('grunt-angular-gettext');
+  grunt.registerTask('extract', ['nggettext_extract']);
+  grunt.registerTask('compile', ['nggettext_compile']);
 };

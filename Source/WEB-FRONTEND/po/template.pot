@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: app/views/right-panel.html:26
+msgid "Create a profile"
+msgstr ""
+
+#: app/views/login-dialog.html:41
+msgid "Create a Profile"
+msgstr ""
+
+#: app/views/right-panel.html:22
+msgid "Create a profile to save your progress!"
+msgstr ""
+
+#: app/views/right-panel.html:4
+msgid "Daily Challenge"
+msgstr ""
+
+#: app/views/login-dialog.html:25
+msgid "Enter password"
+msgstr ""
+
+#: app/views/login-dialog.html:15
+msgid "Enter User name"
+msgstr ""
+
+#: app/views/login-dialog.html:36
+msgid "Forgot password?"
+msgstr ""
+
+#: app/views/header.html:16
+msgid "HOME"
+msgstr ""
+
+#: app/views/login-dialog.html:33
+#: app/views/login-dialog.html:7
+msgid "Login"
+msgstr ""
+
+#: app/views/header.html:17
+msgid "LOGIN"
+msgstr ""
+
+#: app/views/welcome-page.html:16
+msgid "or"
+msgstr ""
+
+#: app/views/login-dialog.html:27
+msgid "Password is required"
+msgstr ""
+
+#: app/views/login-dialog.html:23
+msgid "Password:"
+msgstr ""
+
+#: app/views/right-panel.html:8
+msgid "Set a Daily XP Goal to help keep yourself motivated."
+msgstr ""
+
+#: app/views/right-panel.html:13
+msgid "Set your Daily Goal"
+msgstr ""
+
+#: app/views/welcome-page.html:16
+msgid "Sign up with"
+msgstr ""
+
+#: app/views/action-frame.html:11
+msgid "Skip"
+msgstr ""
+
+#: app/views/login-dialog.html:17
+msgid "Username is required"
+msgstr ""
+
+#: app/views/login-dialog.html:13
+msgid "Username:"
+msgstr ""
+
+#: app/views/welcome-page.html:10
+msgid "We inspire your English learning Anywhere, Anytime for Free"
+msgstr ""

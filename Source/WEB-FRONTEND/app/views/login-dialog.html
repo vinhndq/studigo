@@ -4,41 +4,41 @@
     <div class="modal-content login-dialog">
       <div class="modal-header">
 
-        <h4 class="modal-title">Login</h4>
+        <h4 class="modal-title" translate>Login</h4>
       </div>
       <div class="modal-body">
         <form name="loginForm" class="form-horizontal" role="form">
 
           <div class="form-group" ng-class="{ 'has-error': loginForm.username.$dirty && loginForm.username.$error.required }">
-            <label class="control-label col-sm-3 " for="username">Username:</label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" id="username" name="username" ng-model="username" require placeholder="Enter User name">
+            <label class="control-label col-sm-4 " for="username" translate>Username:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="username" name="username" ng-model="username" require placeholder="{{'Enter User name'|translate}}">
             </div>
-            <span ng-show="loginForm.username.$dirty && loginForm.username.$error.required" class="col-sm-9 col-sm-offset-3 help-block">
+            <span ng-show="loginForm.username.$dirty && loginForm.username.$error.required" class="col-sm-9 col-sm-offset-3 help-block" translate>
                 Username is required
             </span>
 
           </div>
           <div class="form-group margin-bottom" ng-class="{ 'has-error': loginForm.pwd.$dirty && loginForm.pwd.$error.required }">
-            <label class="control-label col-sm-3 " for="pwd">Password:</label>
-            <div class="col-sm-9">
-              <input type="password" class="form-control" id="pwd" name="pwd" ng-model="password" require placeholder="Enter password">
+            <label class="control-label col-sm-4 " for="pwd" translate>Password:</label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" id="pwd" name="pwd" ng-model="password" require placeholder="{{'Enter password'|translate}}">
             </div>
-            <span ng-show="loginForm.pwd.$dirty && loginForm.pwd.$error.required" class="col-sm-9 col-sm-offset-3 help-block">
+            <span ng-show="loginForm.pwd.$dirty && loginForm.pwd.$error.required" class="col-sm-9 col-sm-offset-3 help-block" translate>
                 Password is required
             </span>
           </div>
           <div class="form-group margin-bottom">
             <div class="col-sm-12">
-              <button type="button" class="btn btn-success btn-block" ng-click="login()">Login</button>
+              <button type="button" class="btn btn-success btn-block" ng-click="login()" translate>Login</button>
             </div>
             <div class="col-sm-12">
-              <button type="button" class="btn btn-primary btn-link pull-right">Forgot password?</button>
+              <button type="button" class="btn btn-primary btn-link pull-right" translate>Forgot password?</button>
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-12">
-              <button type="button" class="btn btn-warning btn-block">Create a Profile</button>
+              <button type="button" class="btn btn-warning btn-block" translate>Create a Profile</button>
             </div>
 
           </div>

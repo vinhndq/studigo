@@ -45,7 +45,7 @@ angular
 
 
   }
-  run.$inject = ['$rootScope', '$location', '$cookieStore', '$http','gettext','$cookies'];
+  run.$inject = ['$rootScope', '$location', '$cookieStore', '$http','gettextCatalog','$cookies'];
   function run($rootScope, $location, $cookieStore, $http,gettextCatalog,$cookies) {
        $http.defaults.headers.post['X-CSRFToken'] = $cookies.csrftoken;
       // keep user logged in after page refresh
@@ -69,9 +69,11 @@ angular
           else {
             $rootScope.bodylayout='welcome-body';
           }
+
+          gettextCatalog.setCurrentLanguage('vi_VN');
+          gettextCatalog.debug = true;
       });
 
-      gettextCatalog.currentLanguage='en';
-      gettextCatalog.debug=true;
+
       $http.defaults.useXDomain = true;
   }
