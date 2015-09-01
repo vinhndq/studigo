@@ -11,8 +11,8 @@
          .module('studigoApp')
          .controller('LoginCtrl', LoginController);
 
-     LoginController.$inject = ['$scope','$modal','$location', 'AuthenticationService', 'FlashService'];
-     function LoginController($scope,$modal,$location, AuthenticationService, FlashService) {
+     LoginController.$inject = ['$scope','$modalInstance','$location', 'AuthenticationService', 'FlashService'];
+     function LoginController($scope,$modalInstance,$location, AuthenticationService, FlashService) {
          var vm = this;
 
 
@@ -31,6 +31,7 @@
                      AuthenticationService.SetCredentials(vm.username, vm.password);
                      console.log(response);
                      $scope.user = response.user;
+                     $modalInstance.close();
                      $location.path('/start-tour/first-step/');
 
                  } else {

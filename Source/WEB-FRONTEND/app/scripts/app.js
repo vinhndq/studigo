@@ -61,6 +61,9 @@ angular
           if (restrictedPage && !loggedIn) {
               $location.path('/welcome-page');
           }
+          else {
+            console.log("Logined already");
+          }
           restrictedPage = $.inArray($location.path(), ['/welcome-page']) === -1;
           if(restrictedPage)
           {
