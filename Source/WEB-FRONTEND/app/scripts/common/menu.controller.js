@@ -10,7 +10,9 @@ angular.module('studigoApp').controller('MenuCtrl', function ($scope, $modal, $l
     });
 
     modalInstance.result.then(function () {
-      $log.info('Modal dismissed at: ' + new Date());
+      loginForm.username="";
+      loginForm.password="";
+      $scope.isValid = true;
     });
   };
 

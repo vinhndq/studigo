@@ -21,24 +21,33 @@
              // reset login status
              AuthenticationService.ClearCredentials;
          })();
-
-         $scope.login = function () {
+         $scope.isValid = true;
+         $scope.login = function (form) {
              console.log('before login');
-             vm.dataLoading = true;
-             AuthenticationService.Login($scope.username, $scope.password, function (response) {
-                 if (response.success) {
-                     console.log('success');
-                     AuthenticationService.SetCredentials(vm.username, vm.password);
-                     console.log(response);
-                     $scope.user = response.user;
-                     $modalInstance.close();
-                     $location.path('/start-tour/first-step/');
+             console.log(form);
+             if(form.$valid)
+             {
+               vm.dataLoading = true;
+               AuthenticationService.Login($scope.username, $scope.password, function (response) {
+                   if (response.success) {
+                      $scope.isValid = true;
+                       console.log('success');
+                       AuthenticationService.SetCredentials(vm.username, vm.password);
+                       console.log(response);
+                       $scope.user = response.user;
+                       $modalInstance.close();
+                       $location.path('/start-tour/first-step/');
 
-                 } else {
-                   console.log('failure');
-                     FlashService.Error(response.message);
-                     vm.dataLoading = false;
-                 }
-             });
+                   } else {
+                     $scope.isValid = false;
+                     console.log('failure');
+                       $scope.error="";
+                       vm.dataLoading = false;
+                   }
+               });
+             }
+             else {
+               console.log('form invalid');
+             }
          };
      }
