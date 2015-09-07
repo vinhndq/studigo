@@ -33,8 +33,7 @@
           <div class="form-group margin-bottom">
             <div class="col-sm-12">
               <button type="submit" class="btn btn-success btn-block" translate ng-disabled="loginForm.$invalid">Login</button>
-              <div ng-show="{{isValid}}">
-
+              <div ng-hide="{{isValid}}">
                 Username and password is incorrect.
               </div>
             </div>
