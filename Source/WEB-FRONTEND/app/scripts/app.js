@@ -27,7 +27,9 @@ angular
         controllerAs: 'main'
       })
       .when('/welcome-page', {
+        controller:'WelcomePageCtrl',
         templateUrl: 'views/welcome-page.html',
+        controllerAs:'welcome'
       })
       .when('/register', {
                 controller: 'RegisterCtrl',
@@ -43,13 +45,14 @@ angular
         redirectTo: '/welcome-page'
       });
 
-
+       //$locationProvider.html5Mode(true);
   }
   run.$inject = ['$rootScope', '$location', '$cookieStore', '$http','gettextCatalog','$cookies'];
   function run($rootScope, $location, $cookieStore, $http,gettextCatalog,$cookies) {
        $http.defaults.headers.post['X-CSRFToken'] = $cookies.csrftoken;
       // keep user logged in after page refresh
       $rootScope.globals = $cookieStore.get('globals') || {};
+      console.log($rootScope.globals);
       if ($rootScope.globals.currentUser) {
           $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
       }
@@ -57,8 +60,9 @@ angular
       $rootScope.$on('$locationChangeStart', function (event, next, current) {
           // redirect to welcome-page page if not logged in and trying to access a restricted page
           var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
+          var isStartTour = $location.path().toLowerCase().indexOf('start-tour')>0;
           var loggedIn = $rootScope.globals.currentUser;
-          if (restrictedPage && !loggedIn) {
+          if (restrictedPage && !loggedIn&&!isStartTour) {
               $location.path('/welcome-page');
           }
           else {
