@@ -30,19 +30,16 @@
                vm.dataLoading = true;
                AuthenticationService.Login($scope.username, $scope.password, function (response) {
                    if (response.success) {
-                      $scope.isValid = true;
-                       console.log('success');
-                       AuthenticationService.SetCredentials(vm.username, vm.password);
-                       console.log(response);
-                       $scope.user = response.user;
-                       $modalInstance.close();
-                       $location.path('/start-tour/first-step/');
+                    $scope.isValid = true;
+                    AuthenticationService.SetCredentials(vm.username, vm.password);
+                    $scope.user = response.user;
+                    $modalInstance.close();
+                    $location.path('/');
 
                    } else {
-                     $scope.isValid = false;
-                     console.log('failure');
-                       $scope.error="";
-                       vm.dataLoading = false;
+                    $scope.isValid = false;
+                    $scope.error="";
+                    vm.dataLoading = false;
                    }
                });
              }

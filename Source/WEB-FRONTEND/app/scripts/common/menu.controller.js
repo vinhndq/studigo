@@ -1,5 +1,5 @@
 'use strict';
-angular.module('studigoApp').controller('MenuCtrl', function ($scope, $modal, $log) {
+angular.module('studigoApp').controller('MenuCtrl',['$scope','$modal','$route','AuthenticationService','$location', function ($scope, $modal, $route,AuthenticationService,$location) {
 
   $scope.openLoginDialog = function () {
 
@@ -16,4 +16,11 @@ angular.module('studigoApp').controller('MenuCtrl', function ($scope, $modal, $l
     });
   };
 
-});
+  $scope.logout = function()
+  {
+    console.log("do logout");
+    AuthenticationService.ClearCredentials();
+    $location.path('/welcome-page');
+    console.log($scope.globals);
+  };
+}]);

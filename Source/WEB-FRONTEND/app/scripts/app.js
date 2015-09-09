@@ -52,11 +52,20 @@ angular
        $http.defaults.headers.post['X-CSRFToken'] = $cookies.csrftoken;
       // keep user logged in after page refresh
       $rootScope.globals = $cookieStore.get('globals') || {};
-      console.log($rootScope.globals);
+      console.log('---cookie---');
+      console.log($rootScope.globals.currentUser);
+      console.log('---end cookie---');
+      gettextCatalog.setCurrentLanguage('vi_VN');
+      gettextCatalog.debug = true;
       if ($rootScope.globals.currentUser) {
           $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
       }
-
+      if(!($rootScope.globals.currentUser))
+      {
+        $rootScope.isLogin=false;
+      }else {
+        $rootScope.isLogin=true;
+      }
       $rootScope.$on('$locationChangeStart', function (event, next, current) {
           // redirect to welcome-page page if not logged in and trying to access a restricted page
           var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
@@ -65,9 +74,7 @@ angular
           if (restrictedPage && !loggedIn&&!isStartTour) {
               $location.path('/welcome-page');
           }
-          else {
-            console.log("Logined already");
-          }
+
           restrictedPage = $.inArray($location.path(), ['/welcome-page']) === -1;
           if(restrictedPage)
           {
@@ -77,8 +84,7 @@ angular
             $rootScope.bodylayout='welcome-body';
           }
 
-          gettextCatalog.setCurrentLanguage('vi_VN');
-          gettextCatalog.debug = true;
+
       });
 
 
