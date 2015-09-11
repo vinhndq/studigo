@@ -71,6 +71,15 @@ section {
     padding-bottom: 0px;
   }
 }
+
+@media screen and (max-width:767px)
+{
+  #nav-main
+  {
+    background-color: rgb(64, 110, 97) !important;
+  }
+}
+
 .digo-logo img
 {
   visibility: visible;
@@ -84,7 +93,10 @@ section {
 {
   margin:10px 0 0 25px;
 }
-
+#nav-main
+{
+  background-color: inherit;
+}
 
 .container
 {
