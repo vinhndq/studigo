@@ -1,5 +1,5 @@
-<div id="action-frame" class="container-fluid panel-border action-frame" style="background-color:#ffffff;height:100%">
-  <div class="row header-area">
+<section id="action-frame" class="container-fluid panel-border action-frame" style="background-color:#ffffff">
+  <header class="row header-area">
     <div>
       <div class="col-sm-4 col-sm-offset-1">
         <div class="progress">
@@ -8,15 +8,17 @@
           </div>
         </div>
       </div>
-      <button type="button" class="btn btn-link pull-right" style="font-size:16px;font-weight:bold;color:#333333" translate>Skip</button>
+      <button type="button" class="btn btn-link pull-right" style="font-size:16px;font-weight:bold;color:#333333" translate ng-if="!isLastStep" ng-click="skip()">Skip</button>
     </div>
-  </div>
+  </header>
   <div class="row" id="action-area" ng-include="actionTemplate">
   </div>
-  <div class="row footer-area">
-    <button type="button" class="btn btn-success pull-right action-button">Next</button>
-  </div>
-</div>
+  <footer class="row footer-area">
+
+    <button type="button" class="btn btn-success pull-right action-button" ng-click="next()" ng-if="!isLastStep" translate>Next</button>
+    <button type="button" class="btn btn-success pull-right action-button" ng-click="finish()" ng-if="isLastStep" translate>Finish</button>
+  </footer>
+</section>
 <!--<script>
   $('.pull-down').each(function() {
     $(this).css('margin-top', $(this).parent().height()-$(this).height())

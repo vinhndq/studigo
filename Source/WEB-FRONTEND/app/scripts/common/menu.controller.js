@@ -20,7 +20,7 @@ angular.module('studigoApp').controller('MenuCtrl',['$scope','$modal','$route','
   {
     console.log("do logout");
     AuthenticationService.ClearCredentials();
-    $location.path('/welcome-page');
+    $location.path('/welcome');
     console.log($scope.globals);
   };
 }]);

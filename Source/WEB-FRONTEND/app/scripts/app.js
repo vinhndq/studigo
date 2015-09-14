@@ -26,7 +26,7 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/welcome-page', {
+      .when('/welcome', {
         controller:'WelcomePageCtrl',
         templateUrl: 'views/welcome-page.html',
         controllerAs:'welcome'
@@ -36,13 +36,13 @@ angular
                 templateUrl: 'views/register.html',
                 controllerAs: 'reg'
       })
-      .when('/start-tour/:step', {
+      .when('/start-tour/', {
                 controller: 'StartTourCtrl',
                 templateUrl: 'views/start-tour.html',
                 controllerAs: 'startTour'
       })
       .otherwise({
-        redirectTo: '/welcome-page'
+        redirectTo: '/welcome'
       });
 
        //$locationProvider.html5Mode(true);
@@ -72,13 +72,14 @@ angular
       $rootScope.$on('$locationChangeStart', function (event, next, current) {
           // redirect to welcome-page page if not logged in and trying to access a restricted page
           var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
+          console.log('path:'+$location.path());
           var isStartTour = $location.path().toLowerCase().indexOf('start-tour')>0;
           var loggedIn = $rootScope.globals.currentUser;
           if (restrictedPage && !loggedIn&&!isStartTour) {
-              $location.path('/welcome-page');
+              $location.path('/welcome');
           }
 
-          restrictedPage = $.inArray($location.path(), ['/welcome-page']) === -1;
+          restrictedPage = $.inArray($location.path(), ['/welcome']) === -1;
           if(restrictedPage)
           {
             $rootScope.bodylayout='main-body';

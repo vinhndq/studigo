@@ -3,6 +3,6 @@ angular.module('studigoApp').controller('WelcomePageCtrl',function ($scope,$loca
 
   $scope.doStartTour = function () {
 
-    $location.path('/start-tour/first-step/');
+    $location.path('/start-tour/');
   };
 });
