@@ -17,3 +17,20 @@
   margin-top: 10px;
   margin-bottom: 5px;
 }
+.conversion-lesion .control-icon img{
+  width: 48px;
+  height: 48x;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.conversion-lesion .message-icon
+{
+  width: 16px;
+/*  background-image: url("../images/icons/message.png");*/
+}
+
+.conversion-lesion .user-icon
+{
+  width: 16px;
+  background-image: url("../images/icons/user.png");
+}

@@ -2,10 +2,11 @@
 <div  id="home">
   <div class="overlay">
     <div class="container content" style="height:100%">
-      <div class="col-sm-8" style="height:100%" ng-include="'views/action-frame.html'">
+      <div ng-class="{'col-sm-8':isFirstStep,'col-sm-12':!isFirstStep}" style="height:100%" ng-include="'views/action-frame.html'">
 
       </div>
-      <div class="col-sm-4" style="height:100%" ng-include="'views/right-panel.html'">
+
+      <div class="col-sm-4" style="height:100%" ng-include="'views/right-panel.html'" ng-show="isFirstStep">
       </div>
     </div>
   </div>
