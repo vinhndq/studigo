@@ -67,6 +67,21 @@ body {
     padding-top: 0px;
     padding-bottom: 0px;
   }
+  .action-area
+  {
+      height:auto !important;
+      padding: 0px;
+  }
+  #home .container,.container-fluid
+  {
+    padding-left :0;
+    padding-right :0;
+  }
+  .ignore-padding
+  {
+    padding-left :0 !important;
+    padding-right :0 !important;
+  }
 }
 
 @media screen and (max-width:767px)
@@ -74,6 +89,10 @@ body {
   #nav-main
   {
     background-color: rgb(64, 110, 97) !important;
+  }
+  .action-area
+  {
+      height:auto !important;
   }
 }
 
@@ -145,8 +164,6 @@ body {
 #home {
 
     padding: 0;
-    margin-left: 50px;
-    margin-right: 50px;
     -webkit-background-size: cover;
     background-size: cover;
     -moz-background-size: cover;
@@ -300,7 +317,7 @@ footer a, footer a:hover {
 }
 .action-area
 {
-  height:75%;
+  height:350px;
   padding: 20px;
   color: #00592d;
 }
@@ -337,7 +354,7 @@ footer a, footer a:hover {
 .first-step
 {
   padding-top: 40px;
-  min-height: 360px;
+
 }
 .action-button
 {

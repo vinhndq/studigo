@@ -1,6 +1,6 @@
 <section id="action-frame" class="container-fluid panel-border action-frame" style="background-color:#ffffff">
   <header class="row header-area">
-    <div>
+    <div class="col-sm-12">
       <div class="col-sm-4 col-sm-offset-1">
         <div class="progress">
           <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
@@ -11,7 +11,7 @@
       <button type="button" class="btn btn-link pull-right" style="font-size:16px;font-weight:bold;color:#333333" translate ng-if="!isLastStep" ng-click="skip()">Skip</button>
     </div>
   </header>
-  <div class="row" id="action-area" ng-include="actionTemplate">
+  <div class="row action-area" id="action-area" ng-include="actionTemplate">
   </div>
   <footer class="row footer-area">
 

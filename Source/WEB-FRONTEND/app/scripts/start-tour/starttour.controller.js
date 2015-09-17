@@ -16,7 +16,7 @@
           $scope.actionTemplate = 'views/start-tour/step-1.html';
           $scope.isLastStep=false;
           $scope.isFirstStep = true;
-          
+
           $scope.stepInfo={'currentStep':1,'totalMark':0,'step1Mark':0,'step2Mark':0,'step3Mark':0,'step4Mark':0};
 
           $scope.next = function()
@@ -54,7 +54,7 @@
           {
 
             $scope.stepInfo.currentStep++;
-            if($scope.stepInfo.currentStep===4)
+            if($scope.stepInfo.currentStep===7)
             {
               $scope.isLastStep=true;
             }

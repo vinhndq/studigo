@@ -14,14 +14,12 @@
 .record-lesson .control-icon img{
   width: 48px;
   height: 48px;
-  margin-top: 10px;
-  margin-bottom: 5px;
+
 }
 .conversion-lesion .control-icon img{
   width: 48px;
   height: 48x;
-  margin-top: 10px;
-  margin-bottom: 5px;
+
 }
 .conversion-lesion .message-icon
 {
@@ -29,8 +27,25 @@
 /*  background-image: url("../images/icons/message.png");*/
 }
 
-.conversion-lesion .user-icon
+.conversion-lesion .icon img
 {
-  width: 16px;
-  background-image: url("../images/icons/user.png");
+  width: 20px;
+/*  background-image: url("../images/icons/user.png");*/
+}
+.step-5 img{
+  width: 48px;
+}
+.step-5 .data-input
+{
+  height:150px;
+  -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+   -o-box-sizing: border-box;
+      box-sizing: border-box;
+
+}
+.step-5 .btn
+{
+  margin-top: 5px;
 }
