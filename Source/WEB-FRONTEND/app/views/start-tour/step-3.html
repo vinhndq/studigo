@@ -1,3 +1,4 @@
+<script src="scripts/common/annyang.min.js"></script>
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
@@ -20,7 +21,7 @@
         <a href=""><img src="images/icons/play.png" ></a>
 
 
-        <a href=""><img src="images/icons/recorder.png"></a>
+        <a href=""><img id="recorder" src="images/icons/recorder.png" onclick="startRecord()"></a>
 
 
         <a href=""><img src="images/icons/play.png"></a>
@@ -48,4 +49,24 @@
 <script type="text/javascript">
   var labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
   var data = [300, 500, 100];
+  function startRecord(){
+    if(annyang)
+    {
+      alert("Annyang is already");
+      // Let's define our first command. First the text we expect, and then the function it should call
+      var commands = {
+        '*term': function(term) {
+          console.log(term);
+        }
+      };
+
+      // Add our commands to annyang
+      annyang.addCommands(commands);
+      annyang.debug();
+      // Start listening. You can call this here, or attach this call to an event, button, etc.
+      annyang.setLanguage('en');
+      annyang.start();
+      //$('#recorder').attr("src","images/icons/waiting.png");
+    }
+  }
  </script>

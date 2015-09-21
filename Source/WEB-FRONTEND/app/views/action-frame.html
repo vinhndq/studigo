@@ -14,9 +14,9 @@
   <div class="row action-area" id="action-area" ng-include="actionTemplate">
   </div>
   <footer class="row footer-area">
-
-    <button type="button" class="btn btn-success pull-right action-button" ng-click="next()" ng-if="!isLastStep" translate>Next</button>
-    <button type="button" class="btn btn-success pull-right action-button" ng-click="finish()" ng-if="isLastStep" translate>Finish</button>
+    <button type="button" class="btn btn-success pull-right action-button" ng-click="check()" ng-if="!isPassed" translate>Check</button>
+    <button type="button" class="btn btn-success pull-right action-button" ng-click="next()" ng-if="!isLastStep&&isPassed" translate>Next</button>
+    <button type="button" class="btn btn-success pull-right action-button" ng-click="finish()" ng-if="isLastStep&&isPassed" translate>Finish</button>
   </footer>
 </section>
 <!--<script>
