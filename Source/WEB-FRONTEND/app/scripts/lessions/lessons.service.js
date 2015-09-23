@@ -8,10 +8,10 @@
   function LessonService($http)
   {
     var service={};
-    service.GetLesssonByID = GetLesssonByID;
+    service.GetLesson = GetLesson;
     return service;
 
-    GetLesssonByID = function(lessionId)
+    function GetLesson(code,type)
     {
       return {};
     }
