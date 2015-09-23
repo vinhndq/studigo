@@ -1,0 +1,72 @@
+<script src="scripts/common/annyang.min.js"></script>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+
+      <p class="word">
+        {{question.attributes.}} /ʃɪp/ (noun)
+      </p>
+
+      <p class="word-description">
+        a large boat that carries people or goods by sea
+      </p>
+    </div>
+    <div class="col-sm-2">
+      <img src="images/lessons/ship.png" class="img-responsive col-xs-12">
+    </div>
+  </div>
+  <div class="row record-lesson">
+    <div class="col-sm-1 control-icon" >
+
+        <a href=""><img src="images/icons/play.png" ></a>
+
+
+        <a href=""><img id="recorder" src="images/icons/recorder.png" onclick="startRecord()"></a>
+
+
+        <a href=""><img src="images/icons/play.png"></a>
+
+
+    </div>
+    <div class="col-sm-7" style="text-align:right">
+      <div class="row">
+        <img src="images/lessons/wave-source.png" class="wave img-responsive col-sm-12" >
+      </div>
+      <br/>
+      <div class="row">
+        <img src="images/lessons/wave-result.png" class="wave img-responsive col-sm-12">
+      </div>
+
+
+    </div>
+    <div class="col-sm-4" >
+      <canvas id="doughnut" class="chart chart-doughnut" data="data"
+        labels="labels"></canvas>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
+  var data = [300, 500, 100];
+  function startRecord(){
+    if(annyang)
+    {
+      alert("Annyang is already");
+      // Let's define our first command. First the text we expect, and then the function it should call
+      var commands = {
+        '*term': function(term) {
+          console.log(term);
+        }
+      };
+
+      // Add our commands to annyang
+      annyang.addCommands(commands);
+      annyang.debug();
+      // Start listening. You can call this here, or attach this call to an event, button, etc.
+      annyang.setLanguage('en');
+      annyang.start();
+      //$('#recorder').attr("src","images/icons/waiting.png");
+    }
+  }
+ </script>
