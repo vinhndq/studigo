@@ -13,6 +13,7 @@
 
      StartTourController.$inject = ['$scope','$location', '$http','$routeParams'];
      function StartTourController($scope,$location,$http,$routeParams) {
+          $scope.units = starttour_units;
           $scope.actionTemplate = 'views/start-tour/step-1.html';
           $scope.isLastStep=false;
           $scope.isFirstStep = true;
@@ -63,5 +64,5 @@
             $scope.actionTemplate = 'views/start-tour/step-'+$scope.stepInfo.currentStep+'.html';
           };
 
-          
+
      }

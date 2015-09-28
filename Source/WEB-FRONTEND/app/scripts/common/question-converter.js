@@ -1,21 +1,16 @@
-function getWord(question)
+function convertToWord(question)
 {
   var word = {
     "video_path":'',
     "video_description":'',
-    "word":'',
-    "spelling":'',
+    "word_content":'',
     "word_picture":'',
-    "word_means":[{
-        "mean":"",
-        "egs":[{"eg":''},{"eg":''}]
-    }],
     "word_audio":''
   };
 
   return word;
 }
-function getConversation(question)
+function convertToConversation(question)
 {
   var conversation = {
     "sentence":[

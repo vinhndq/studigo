@@ -4,20 +4,9 @@
     <div class="col-sm-8">
 
       <p class="word">
-        {{question.attributes.}} /ʃɪp/ (noun)
+        {{question.word_content}}
       </p>
-
-      <p class="word-description">
-        a large boat that carries people or goods by sea
-      </p>
-    </div>
-    <div class="col-sm-2">
-      <img src="images/lessons/ship.png" class="img-responsive col-xs-12">
-    </div>
-  </div>
-  <div class="row record-lesson">
-    <div class="col-sm-1 control-icon" >
-
+      <p class="control-icon">
         <a href=""><img src="images/icons/play.png" ></a>
 
 
@@ -25,24 +14,12 @@
 
 
         <a href=""><img src="images/icons/play.png"></a>
-
-
+      </p>
     </div>
-    <div class="col-sm-7" style="text-align:right">
-      <div class="row">
-        <img src="images/lessons/wave-source.png" class="wave img-responsive col-sm-12" >
-      </div>
-      <br/>
-      <div class="row">
-        <img src="images/lessons/wave-result.png" class="wave img-responsive col-sm-12">
-      </div>
-
-
+    <div class="col-sm-2">
+      <img src="{{question.word_picture}}" class="img-responsive col-xs-12">
     </div>
-    <div class="col-sm-4" >
-      <canvas id="doughnut" class="chart chart-doughnut" data="data"
-        labels="labels"></canvas>
-    </div>
+  </div>
   </div>
 </div>
 
