@@ -6,7 +6,11 @@
 {
 
 }
+.word-control-icon img{
+  width: 48px;
+  height: 48px;
 
+}
 .record-lesson .wave
 {
   height: 85px;

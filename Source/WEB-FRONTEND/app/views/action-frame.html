@@ -14,13 +14,31 @@
   <div class="row action-area" id="action-area" ng-include="actionTemplate">
   </div>
   <footer class="row footer-area">
-    <button type="button" class="btn btn-success pull-right action-button" ng-click="check()" ng-if="!isPassed" translate>Check</button>
-    <button type="button" class="btn btn-success pull-right action-button" ng-click="next()" ng-if="!isLastStep&&isPassed" translate>Next</button>
-    <button type="button" class="btn btn-success pull-right action-button" ng-click="finish()" ng-if="isLastStep&&isPassed" translate>Finish</button>
+    <div id="question_result_success" class="pull-left" style="visibility:hidden">
+      Chính xác
+    </div>
+    <div id="question_result_failed" class="pull-left" style="visibility:hidden">
+      Sai. thử lại đi
+    </div>
+    <button type="button" class="btn btn-success pull-right action-button" ng-click="check()" ng-if="!isPassed&&hasAnswer" translate>Check</button>
+    <button type="button" class="btn btn-success pull-right action-button" ng-click="next()" ng-if="(!isLastStep&&isPassed)||(!isLastStep&&!hasAnswer)" translate>Next</button>
+    <button type="button" class="btn btn-success pull-right action-button" ng-click="finish()" ng-if="(isLastStep&&isPassed)||(isLastStep&&!hasAnswer)" translate>Finish</button>
   </footer>
 </section>
-<!--<script>
-  $('.pull-down').each(function() {
-    $(this).css('margin-top', $(this).parent().height()-$(this).height())
-});
-</script>-->
+<script>
+  function visibleSuccessResult()
+  {
+
+    $('#question_result_success').show();
+  }
+  function visibleFailedResult()
+  {
+    try{
+      $('#question_result_failed').show();
+    }
+    catch(err) {
+      alert(err);
+    }
+
+  }
+</script>

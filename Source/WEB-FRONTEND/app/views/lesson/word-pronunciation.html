@@ -1,13 +1,21 @@
 <script src="scripts/common/annyang.min.js"></script>
-<div class="container-fluid">
+<script type="text/javascript">
+  $(document).ready( function() {
+  $('#player').click(function(){
+    var audio = document.getElementById("audio");
+    audio.play();
+  });
+  });
+</script>
+<div class="container-fluid" >
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-7">
 
-      <p class="word">
-        {{question.word_content}}
+      <p class="word" ng-bind-html="question.word_content">
+
       </p>
-      <p class="control-icon">
-        <a href=""><img src="images/icons/play.png" ></a>
+      <p class="word-control-icon">
+        <a href=""><img id="player" src="images/icons/play.png" ></a>
 
 
         <a href=""><img id="recorder" src="images/icons/recorder.png" onclick="startRecord()"></a>
@@ -15,8 +23,10 @@
 
         <a href=""><img src="images/icons/play.png"></a>
       </p>
+      <audio id="audio" ng-src="{{question.word_audio}}" ></audio>
+
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <img src="{{question.word_picture}}" class="img-responsive col-xs-12">
     </div>
   </div>
@@ -34,6 +44,16 @@
       var commands = {
         '*term': function(term) {
           console.log(term);
+          if(term==='show')
+          {
+            visibleSuccessResult();
+            annyang.stop();
+          }
+          else
+          {
+            
+            visibleFailedResult();
+          }
         }
       };
 
