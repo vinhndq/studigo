@@ -55,6 +55,7 @@
             if($scope.question!=null)
             {
               $scope.question.question_content = $sce.trustAsHtml($scope.question.question_content);
+              $scope.question.video_path=$sce.trustAsResourceUrl($scope.question.video_path);
             }
             console.log($scope.question);
             if($scope.stepInfo.currentStep>$scope.total_step)

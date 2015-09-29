@@ -26,7 +26,7 @@ var starttour_units=[
     "questionid": 1,
     "illustrate_img_path": "",
     "img_path_quest_other": "",
-    "video_path": "http://www.youtube.com/watch?v=NF92RdZC6wE",
+    "video_path": "https://www.youtube.com/embed/NF92RdZC6wE",
     "audio_path": "",
     "question_type": "1",
     "answer_type": "",
