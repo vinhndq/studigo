@@ -87,7 +87,7 @@
             else if(WORD_TYPE===$scope.question.ui_type)
             {
               $scope.actionTemplate='views/lesson/word-pronunciation.html';
-              $scope.question = convertToWord($scope.question);
+              $scope.question = convertToWord($scope.question,$sce);
               console.log($scope.question);
             }
             else {
