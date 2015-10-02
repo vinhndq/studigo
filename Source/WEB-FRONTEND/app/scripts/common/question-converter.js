@@ -66,3 +66,79 @@ function convertToConversation(question)
 
   return conversation;
 }
+
+function convertToListen(question)
+{
+  var data={
+    "audio":'',
+    "slow_audio":'',
+    "description":'',
+    "right_answer":[],
+    "suggestList":[],
+
+  };
+
+  data.audio=question.audio_path;
+  data.description = question.question_name;
+  for(i=0;i<question.questionattributes.length;i++)
+  {
+    if(question.questionattributes[i].att_code===ATTR_QUESTION_CONTENT)
+    {
+      data.suggestList.push(question.questionattributes[i].attribute_value);
+
+    }
+    else if(question.questionattributes[i].att_code===ATTR_QUESTION_ANSWER)
+    {
+      data.right_answer.push(question.questionattributes[i].attribute_value);
+    }
+  }
+
+  console.log(data.suggestList);
+  return data;
+}
+
+function convertToReadParagraph(question)
+{
+  var data={
+    "description":'',
+    "question_content":''
+  }
+
+  data.description = question.question_name;
+  if(question.questionattributes!=null && question.questionattributes.length>0)
+  {
+    data.question_content = question.questionattributes[0].attribute_value;
+  }
+  return data;
+}
+
+function convertToReadAndQuestion(question)
+{
+  var data = {
+    "question_content":'',
+    "choiceList":[
+
+    ],
+    "right_answer":[
+
+    ]
+  }
+  for(var i=0;i<question.questionattributes.length;i++)
+  {
+    if(question.questionattributes[i].att_code===ATTR_QUESTION_CHOICE)
+    {
+      data.choiceList.push(question.questionattributes[i].attribute_value);
+
+    }
+    else if(question.questionattributes[i].att_code===ATTR_QUESTION_ANSWER)
+    {
+      data.right_answer.push(question.questionattributes[i].attribute_value);
+    }
+    else if(question.questionattributes[i].att_code===ATTR_QUESTION_CONTENT)
+    {
+      data.question_content=question.questionattributes[i].attribute_value;
+    }
+  }
+  console.log(data.choiceList);
+  return data;
+}

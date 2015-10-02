@@ -35,6 +35,7 @@
           };
           $scope.next = function()
           {
+            $scope.stepInfo.currentStep++;
             $scope.redirect();
 
           };
@@ -45,12 +46,18 @@
           };
           $scope.skip=function()
           {
+            $scope.stepInfo.currentStep++;
             $scope.redirect();
           };
+          $scope.readAgain = function()
+          {
+            $scope.stepInfo.currentStep--;
+            $scope.redirect();
+          }
           $scope.redirect = function()
           {
 
-            $scope.stepInfo.currentStep++;
+
             $scope.question = $scope.units[$scope.stepInfo.currentStep-1];
             if($scope.question!=null)
             {
@@ -88,6 +95,24 @@
             {
               $scope.actionTemplate='views/lesson/word-pronunciation.html';
               $scope.question = convertToWord($scope.question,$sce);
+              console.log($scope.question);
+            }
+            else if(LISTEN_TYPE===$scope.question.ui_type)
+            {
+              $scope.actionTemplate='views/lesson/listen.html';
+              $scope.question = convertToListen($scope.question);
+              console.log($scope.question);
+            }
+            else if(READING_TYPE===$scope.question.ui_type)
+            {
+              $scope.actionTemplate='views/lesson/reading-paragraph.html';
+              $scope.question = convertToReadParagraph($scope.question);
+              console.log($scope.question);
+            }
+            else if(READ_AND_QUESTION_TYPE===$scope.question.ui_type)
+            {
+              $scope.actionTemplate='views/lesson/reading-question.html';
+              $scope.question = convertToReadAndQuestion($scope.question);
               console.log($scope.question);
             }
             else {

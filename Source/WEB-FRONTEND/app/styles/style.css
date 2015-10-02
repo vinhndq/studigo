@@ -376,3 +376,26 @@ footer a, footer a:hover {
     vertical-align: bottom;
     float: none;
 }
+
+.circle {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 0;
+
+  border-radius: 50%;
+
+  /* Just making it pretty */
+  @shadow: rgba(0, 0, 0, .1);
+  @shadow-length: 4px;
+  -webkit-box-shadow: 0 @shadow-length 0 0 @shadow;
+          box-shadow: 0 @shadow-length 0 0 @shadow;
+  text-shadow: 0 @shadow-length 0 @shadow;
+  background: yellow;
+  text-align: center;
+}
+.align-bottom {
+   position: absolute;
+   bottom: 110px;
+   left: 50px
+ }
