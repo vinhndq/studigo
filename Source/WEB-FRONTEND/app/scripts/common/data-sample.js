@@ -1,51 +1,593 @@
 var starttour_units=[
   {
-    "questionattributes": [
+    "questions": [
+      {
+        "questionid": 1,
+        "question_name": "Sound - /J/",
+        "illustrate_img_path": "",
+        "img_path": "",
+        "video_path": "https://www.youtube.com/watch?v=NF92RdZC6wE",
+        "audio_path": "",
+        "status": "1",
+        "type": "1",
+        "answer_type": "",
+        "answer_num": 0
+      },
+      {
+        "questionid": 2,
+        "question_name": "Word - Show\r\n",
+        "illustrate_img_path": null,
+        "img_path": "image/00_Start_Tour/01_Words/word_show.gif\r\n",
+        "video_path": null,
+        "audio_path": "audio/00_Start_Tour/01_Words/word_show.mp3\r\n",
+        "status": "1",
+        "type": "2",
+        "answer_type": "1",
+        "answer_num": 1
+      },
+      {
+        "questionid": 3,
+        "question_name": "Word - So\r\n",
+        "illustrate_img_path": null,
+        "img_path": null,
+        "video_path": null,
+        "audio_path": null,
+        "status": "1",
+        "type": "2",
+        "answer_type": "1",
+        "answer_num": 1
+      }
+    ],
+    "lessons": [],
+    "unitquestions": [
+      {
+        "questionid": 1,
+        "question_name": "Sound - /J/",
+        "illustrate_img_path": "",
+        "img_path": "",
+        "video_path": "https://www.youtube.com/watch?v=NF92RdZC6wE",
+        "audio_path": "",
+        "status": "1",
+        "type": "1",
+        "answer_type": "",
+        "answer_num": 0
+      },
+      {
+        "questionid": 2,
+        "question_name": "Word - Show\r\n",
+        "illustrate_img_path": null,
+        "img_path": "image/00_Start_Tour/01_Words/word_show.gif\r\n",
+        "video_path": null,
+        "audio_path": "audio/00_Start_Tour/01_Words/word_show.mp3\r\n",
+        "status": "1",
+        "type": "2",
+        "answer_type": "1",
+        "answer_num": 1
+      },
+      {
+        "questionid": 3,
+        "question_name": "Word - So\r\n",
+        "illustrate_img_path": null,
+        "img_path": null,
+        "video_path": null,
+        "audio_path": null,
+        "status": "1",
+        "type": "2",
+        "answer_type": "1",
+        "answer_num": 1
+      }
+    ],
+    "unitid": 1,
+    "unit_name": "Start tour - Word",
+    "num_question": 3,
+    "num_quest_fail_continue": 5,
+    "total_point": 200,
+    "bonus_point": 0,
+    "pass_point": 0,
+    "num_question_fail": 9,
+    "num_point_minus": 0,
+    "status": "1",
+    "type": "1",
+    "content_type": "1"
+  },
+  {
+    "questions": [
+      {
+        "questionid": 4,
+        "question_name": "Start tour Conversation",
+        "illustrate_img_path": "",
+        "img_path": "",
+        "video_path": "",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_01.mp3",
+        "status": "1",
+        "type": "3",
+        "answer_type": "1",
+        "answer_num": 1
+      }
+    ],
+    "lessons": [],
+    "unitquestions": [
+      {
+        "questionid": 4,
+        "question_name": "Start tour Conversation",
+        "illustrate_img_path": "",
+        "img_path": "",
+        "video_path": "",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_01.mp3",
+        "status": "1",
+        "type": "3",
+        "answer_type": "1",
+        "answer_num": 1
+      }
+    ],
+    "unitid": 2,
+    "unit_name": "Start tour - Conversation",
+    "num_question": 11,
+    "num_quest_fail_continue": 5,
+    "total_point": 110,
+    "bonus_point": 0,
+    "pass_point": 100,
+    "num_question_fail": 9,
+    "num_point_minus": 0,
+    "status": "1",
+    "type": "1",
+    "content_type": "2"
+  },
+  {
+    "questions": [
+      {
+        "questionid": 15,
+        "question_name": "Start tour Listen and Write",
+        "illustrate_img_path": "",
+        "img_path": "",
+        "video_path": "",
+        "audio_path": "audio/00_Start_Tour/03_Listening/48_03.mp3",
+        "status": "1",
+        "type": "4",
+        "answer_type": "3",
+        "answer_num": 1
+      }
+    ],
+    "lessons": [],
+    "unitquestions": [
+      {
+        "questionid": 15,
+        "question_name": "Start tour Listen and Write",
+        "illustrate_img_path": "",
+        "img_path": "",
+        "video_path": "",
+        "audio_path": "audio/00_Start_Tour/03_Listening/48_03.mp3",
+        "status": "1",
+        "type": "5",
+        "answer_type": "3",
+        "answer_num": 1
+      }
+    ],
+    "unitid": 3,
+    "unit_name": "Start tour - Listening",
+    "num_question": 1,
+    "num_quest_fail_continue": 5,
+    "total_point": 10,
+    "bonus_point": 0,
+    "pass_point": 50,
+    "num_question_fail": 9,
+    "num_point_minus": 0,
+    "status": "1",
+    "type": "1",
+    "content_type": "3"
+  },
+  {
+    "questions": [
+      {
+        "questionid": 16,
+        "question_name": "Start tourReading",
+        "illustrate_img_path": "",
+        "img_path": "",
+        "video_path": "",
+        "audio_path": "",
+        "status": "1",
+        "type": "5",
+        "answer_type": "4",
+        "answer_num": 1
+      },
+      {
+        "questionid": 17,
+        "question_name": "Start tourReading -  Question",
+        "illustrate_img_path": "",
+        "img_path": "",
+        "video_path": "",
+        "audio_path": "",
+        "status": "1",
+        "type": "6",
+        "answer_type": "",
+        "answer_num": 1
+      }
+    ],
+    "lessons": [
+      {
+        "lessonid": 1,
+        "lesson_name": "Start tour",
+        "num_unit": 4,
+        "total_point": 630,
+        "pass_point": 0,
+        "status": "1",
+        "type": "0",
+        "bonus_point": 0
+      }
+    ],
+    "unitquestions": [
+      {
+        "questionid": 16,
+        "question_name": "Start tourReading",
+        "illustrate_img_path": "",
+        "img_path": "",
+        "video_path": "",
+        "audio_path": "",
+        "status": "1",
+        "type": "6",
+        "answer_type": "4",
+        "answer_num": 1
+      },
+      {
+        "questionid": 17,
+        "question_name": "Start tourReading -  Question",
+        "illustrate_img_path": "",
+        "img_path": "",
+        "video_path": "",
+        "audio_path": "",
+        "status": "1",
+        "type": "6",
+        "answer_type": "",
+        "answer_num": 1
+      }
+    ],
+    "unitid": 4,
+    "unit_name": "Start tour - Reading",
+    "num_question": 2,
+    "num_quest_fail_continue": 5,
+    "total_point": 20,
+    "bonus_point": 0,
+    "pass_point": 50,
+    "num_question_fail": 9,
+    "num_point_minus": 0,
+    "status": "1",
+    "type": "1",
+    "content_type": "4"
+  }
+];
+
+var data_4 =[
+      {
+        "id": 1,
+        "questionid": 4,
+        "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
+        "attribute_name": "Question content",
+        "attribute_value": "Hello",
+        "answer_text":"hello",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_01.mp3",
+        "priorities": 1,
+        "type": "4",
+        "answer_input": 0,
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "1",
+        "playerid":1,
+        "wait_time":4
+      },
+      {
+        "id": 2,
+        "questionid": 4,
+        "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
+        "attribute_name": "Question content",
+        "attribute_value": "Hi",
+        "answer_text":"hi",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_02.mp3",
+        "priorities": 2,
+        "type": "4",
+        "answer_input": 1,
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "1",
+        "playerid":2,
+        "wait_time":4
+      },
+      {
+        "id": 3,
+        "questionid": 4,
+        "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
+        "attribute_name": "Question content",
+        "attribute_value": "How are you?",
+        "answer_text":"how are you",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_03.mp3",
+        "priorities": 3,
+        "type": "4",
+        "answer_input": 0,
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "1",
+        "playerid":1,
+        "wait_time":4
+      },
+      {
+        "id": 4,
+        "questionid": 4,
+        "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
+        "attribute_name": "Question content",
+        "attribute_value": "I'm good. How are you?",
+        "answer_text":"I'm good how are you",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_04.mp3",
+        "priorities": 4,
+        "type": "4",
+        "answer_input": 1,
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "1",
+        "playerid":2,
+        "wait_time":4
+      },
+      {
+        "id": 5,
+        "questionid": 4,
+        "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
+        "attribute_name": "Question content",
+        "attribute_value": "Good. Do you speak English?",
+        "answer_text":"Good Do you speak english",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_05.mp3",
+        "priorities": 5,
+        "type": "4",
+        "answer_input": 0,
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "1",
+        "playerid":1,
+        "wait_time":4
+      },
+      {
+        "id": 6,
+        "questionid": 4,
+        "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
+        "attribute_name": "Question content",
+        "attribute_value": "A little. Are you American?",
+        "answer_text":"A little are you American",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_06.mp3",
+        "priorities": 6,
+        "type": "4",
+        "answer_input": 1,
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "1",
+        "playerid":2,
+        "wait_time":4
+      },
+      {
+        "id": 7,
+        "questionid": 4,
+        "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
+        "attribute_name": "Question content",
+        "attribute_value": "Yes",
+        "answer_text":"yes",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_07.mp3",
+        "priorities": 7,
+        "type": "4",
+        "answer_input": 0,
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "1",
+        "playerid":1,
+        "wait_time":4
+      },
+      {
+        "id": 8,
+        "questionid": 4,
+        "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
+        "attribute_name": "Question content",
+        "attribute_value": "Where are you from?",
+        "answer_text":"where are you from",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_08.mp3",
+        "priorities": 8,
+        "type": "4",
+        "answer_input": 1,
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "1",
+        "playerid":2,
+        "wait_time":4
+      },
+      {
+        "id": 9,
+        "questionid": 4,
+        "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
+        "attribute_name": "Question content",
+        "attribute_value": "I'm from California.",
+        "answer_text":"I'm from California",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_09.mp3",
+        "priorities": 9,
+        "type": "4",
+        "answer_input": 0,
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "1",
+        "playerid":1,
+        "wait_time":4
+      },
+      {
+        "id": 10,
+        "questionid": 4,
+        "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
+        "attribute_name": "Question content",
+        "attribute_value": "Nice to meet you.",
+        "answer_text":"Nice to meet you",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_10.mp3",
+        "priorities": 10,
+        "type": "4",
+        "answer_input": 1,
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "1",
+        "playerid":2,
+        "wait_time":4
+      },
+      {
+        "id": 11,
+        "questionid": 4,
+        "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
+        "attribute_name": "Question content",
+        "attribute_value": "Nice to meet you too.",
+        "answer_text":"Nice to meet you too",
+        "audio_path": "audio/00_Start_Tour/02_Conversation/01_11.mp3",
+        "priorities": 11,
+        "type": "4",
+        "answer_input": 0,
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "1",
+        "playerid":1,
+        "wait_time":4
+      }
+  ];
+var data_15=[
+
+      {
+        "id": 7,
+        "questionid": 15,
+        "attributeid": 2,
+        "att_code": "ANSWER_CONTENT",
+        "attribute_name": "Question answer",
+        "attribute_value": "Well, I still haven't finished my Christmas shopping. Do you want to go shopping with me this weekend?",
+        "priorities": 1,
+        "type": "2",
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "4"
+      }
+      ,
+      {
+        "id": 1,
+        "questionid": 15,
+        "attributeid": 3,
+        "att_code": "QUESTION_CHOICE",
+        "attribute_name": "Question choice",
+        "attribute_value": "my Christmas",
+        "priorities": 1,
+        "type": "2",
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "4"
+      },
+      {
+        "id": 2,
+        "questionid": 15,
+        "attributeid": 3,
+        "att_code": "QUESTION_CHOICE",
+        "attribute_name": "Question choice",
+        "attribute_value": "to go shopping",
+        "priorities": 2,
+        "type": "2",
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "4"
+      },
+      {
+        "id": 3,
+        "questionid": 15,
+        "attributeid": 3,
+        "att_code": "QUESTION_CHOICE",
+        "attribute_name": "Question choice",
+        "attribute_value": "finished",
+        "priorities": 3,
+        "type": "2",
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "4"
+      },
+      {
+        "id": 4,
+        "questionid": 15,
+        "attributeid": 3,
+        "att_code": "QUESTION_CHOICE",
+        "attribute_name": "Question choice",
+        "attribute_value": "with me",
+        "priorities": 4,
+        "type": "2",
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "4"
+      },
+      {
+        "id": 5,
+        "questionid": 15,
+        "attributeid": 3,
+        "att_code": "QUESTION_CHOICE",
+        "attribute_name": "Question choice",
+        "attribute_value": "this weekend?",
+        "priorities": 5,
+        "type": "2",
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "4"
+      },
+      {
+        "id": 6,
+        "questionid": 15,
+        "attributeid": 3,
+        "att_code": "QUESTION_CHOICE",
+        "attribute_name": "Question choice",
+        "attribute_value": "Well, I still haven't",
+        "priorities": 6,
+        "type": "2",
+        "status": "1",
+        "groupid": 1,
+        "ui_type": "4"
+      }
+
+];
+
+var data_1=[
       {
         "id": 1,
         "questionid": 1,
         "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
         "attribute_name": "Question content",
-        "attribute_value": "Please learn to say the sound /ʃ/ found in sure, ship and national",
+        "attribute_value": "Please learn to say the sound /?/ found in sure, ship and national",
         "priorities": 1,
         "type": "3",
         "status": "1",
         "groupid": 1,
         "ui_type": "1",
-        "att_code": "QUESTION_CONTENT"
-      }
-    ],
-    "questionid": 1,
-    "question_name": "Sound - /J/",
-    "illustrate_img_path": "",
-    "img_path": "",
-    "video_path": "https://www.youtube.com/watch?v=NF92RdZC6wE",
-    "audio_path": "",
-    "status": "1",
-    "type": "1",
-    "answer_type": "",
-    "answer_num": 0,
-    "ui_type":'1'
-  },
-  {
-    "questionattributes": [
+        "update_at": "2015-10-05T15:41:29.000Z"
+      }];
+var data_2=[
       {
         "id": 2,
         "questionid": 2,
         "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
         "attribute_name": "Question content",
-        "attribute_value": "Show /ʃow/ (v) <br/>to make something clear; to prove something.<br/>show (that)… The figures clearly show that her claims are false.<br/>show somebody that… Market research has shown us that people want quality, not just low prices.",
+        "attribute_value": "Show /?ow/ (v) \nto make something clear; to prove something.\nshow (that)… The figures clearly show that her claims are false.\nshow somebody that… Market research has shown us that people want quality, not just low prices.",
         "priorities": 1,
         "type": "2",
         "status": "1",
         "groupid": 2,
         "ui_type": "1",
-        "att_code": "QUESTION_CONTENT"
+        "update_at": "2015-10-05T15:41:44.000Z"
       },
       {
         "id": 3,
         "questionid": 2,
         "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
         "attribute_name": "Question content",
         "attribute_value": "to make something clear; to prove something",
         "priorities": 2,
@@ -53,12 +595,13 @@ var starttour_units=[
         "status": "0",
         "groupid": 2,
         "ui_type": "1",
-        "att_code": "QUESTION_CONTENT"
+        "update_at": "2015-10-05T15:41:52.000Z"
       },
       {
         "id": 4,
         "questionid": 2,
         "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
         "attribute_name": "Question content",
         "attribute_value": "show (that)… The figures clearly show that her claims are false.\nshow somebody that… Market research has shown us that people want quality, not just low prices.",
         "priorities": 3,
@@ -66,40 +609,28 @@ var starttour_units=[
         "status": "0",
         "groupid": 2,
         "ui_type": "1",
-        "att_code": "QUESTION_CONTENT"
-      }
-    ],
-    "questionid": 2,
-    "question_name": "Word - Show\r\n",
-    "illustrate_img_path": null,
-    "img_path": "image/00_Start_Tour/01_Words/word_show.gif\r\n",
-    "video_path": null,
-    "audio_path": "audio/00_Start_Tour/01_Words/word_show.mp3\r\n",
-    "status": "1",
-    "type": "2",
-    "answer_type": "1",
-    "answer_num": 1,
-    "ui_type":'2'
-  },
-  {
-    "questionattributes": [
+        "update_at": "2015-10-05T15:42:02.000Z"
+      }];
+  var data_3=[
       {
         "id": 5,
         "questionid": 3,
         "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
         "attribute_name": "Question content",
-        "attribute_value": "So /səʊ/ (adv)\n1. to such a great degree\nDon't look so angry.\nso… (that)… She spoke so quietly (that) I could hardly hear her.\n2. very; extremely\n I'm so glad to see you.",
+        "attribute_value": "So /s??/ (adv)\n1. to such a great degree\nDon't look so angry.\nso… (that)… She spoke so quietly (that) I could hardly hear her.\n2. very; extremely\n I'm so glad to see you.",
         "priorities": 1,
         "type": "2",
         "status": "1",
         "groupid": 3,
         "ui_type": "1",
-        "att_code": "QUESTION_CONTENT"
+        "update_at": "2015-10-05T15:42:14.000Z"
       },
       {
         "id": 6,
         "questionid": 3,
         "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
         "attribute_name": "Question content",
         "attribute_value": "1. to such a great degree",
         "priorities": 2,
@@ -107,12 +638,13 @@ var starttour_units=[
         "status": "0",
         "groupid": 3,
         "ui_type": "1",
-        "att_code": "QUESTION_CONTENT"
+        "update_at": "2015-10-05T15:42:23.000Z"
       },
       {
         "id": 7,
         "questionid": 3,
         "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
         "attribute_name": "Question content",
         "attribute_value": "Don't look so angry.\nso… (that)… She spoke so quietly (that) I could hardly hear her.",
         "priorities": 3,
@@ -120,12 +652,13 @@ var starttour_units=[
         "status": "0",
         "groupid": 3,
         "ui_type": "1",
-        "att_code": "QUESTION_CONTENT"
+        "update_at": "2015-10-05T15:42:31.000Z"
       },
       {
         "id": 8,
         "questionid": 3,
         "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
         "attribute_name": "Question content",
         "attribute_value": "2. very; extremely",
         "priorities": 4,
@@ -133,12 +666,13 @@ var starttour_units=[
         "status": "0",
         "groupid": 3,
         "ui_type": "1",
-        "att_code": "QUESTION_CONTENT"
+        "update_at": "2015-10-05T15:42:43.000Z"
       },
       {
         "id": 9,
         "questionid": 3,
         "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
         "attribute_name": "Question content",
         "attribute_value": "I'm so glad to see you.",
         "priorities": 5,
@@ -146,246 +680,103 @@ var starttour_units=[
         "status": "0",
         "groupid": 3,
         "ui_type": "1",
-        "att_code": "QUESTION_CONTENT"
+        "update_at": "2015-10-05T15:42:50.000Z"
       }
-    ],
-    "questionid": 3,
-    "question_name": "Word - So\r\n",
-    "illustrate_img_path": null,
-    "img_path": null,
-    "video_path": null,
-    "audio_path": null,
-    "status": "1",
-    "type": "2",
-    "answer_type": "1",
-    "answer_num": 1,
-    "ui_type":'2'
-  },
-  {
-    "questionattributes": [
+
+]
+;
+var data_16=[
       {
-        "id": 21,
-        "questionid": 15,
-        "attributeid": 1,
-        "attribute_name": "Question content",
-        "attribute_value": "my Christmas",
-        "priorities": 1,
-        "type": "2",
-        "status": "1",
-        "groupid": 1,
-        "ui_type": "4",
-        "att_code": "QUESTION_CONTENT"
-      },
-      {
-        "id": 22,
-        "questionid": 15,
-        "attributeid": 1,
-        "attribute_name": "Question content",
-        "attribute_value": "to go shopping",
-        "priorities": 2,
-        "type": "2",
-        "status": "1",
-        "groupid": 1,
-        "ui_type": "4",
-        "att_code": "QUESTION_CONTENT"
-      },
-      {
-        "id": 23,
-        "questionid": 15,
-        "attributeid": 1,
-        "attribute_name": "Question content",
-        "attribute_value": "finished",
-        "priorities": 3,
-        "type": "2",
-        "status": "1",
-        "groupid": 1,
-        "ui_type": "4",
-        "att_code": "QUESTION_CONTENT"
-      },
-     {
-        "id": 24,
-        "questionid": 15,
-        "attributeid": 1,
-        "attribute_name": "Question content",
-        "attribute_value": "with me",
-        "priorities": 4,
-        "type": "2",
-        "status": "1",
-        "groupid": 1,
-        "ui_type": "4",
-        "att_code": "QUESTION_CONTENT"
-      },
-      {
-        "id": 25,
-        "questionid": 15,
-        "attributeid": 1,
-        "attribute_name": "Question content",
-        "attribute_value": "this weekend?",
-        "priorities": 5,
-        "type": "2",
-        "status": "1",
-        "groupid": 1,
-        "ui_type": "4",
-        "att_code": "QUESTION_CONTENT"
-      },
-      {
-        "id": 26,
-        "questionid": 15,
-        "attributeid": 1,
-        "attribute_name": "Question content",
-        "attribute_value": "Well, I still haven't",
-        "priorities": 6,
-        "type": "2",
-        "status": "1",
-        "groupid": 1,
-        "ui_type": "4",
-        "att_code": "QUESTION_CONTENT"
-      },
-      {
-        "id": 27,
-        "questionid": 15,
-        "attributeid": 2,
-        "attribute_name": "Question answer",
-        "attribute_value": "Well, I still haven't finished my Christmas shopping. Do you want to go shopping with me this weekend?",
-        "priorities": 1,
-        "type": "2",
-        "status": "1",
-        "groupid": 1,
-        "ui_type": "4",
-        "att_code": "QUESTION_ANSWER\r\n"
-      }
-    ],
-    "questionid": 15,
-    "question_name": "Start tour Listen and Write",
-    "illustrate_img_path": "",
-    "img_path": "",
-    "video_path": "",
-    "audio_path": "audio/00_Start_Tour/03_Listening/48_03.mp3",
-    "status": "1",
-    "type": "5",
-    "answer_type": "3",
-    "answer_num": 1,
-    "ui_type":'4'
-  },
-  {
-    "questionattributes": [
-      {
-        "id": 28,
+        "id": 1,
         "questionid": 16,
         "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
         "attribute_name": "Question content",
         "attribute_value": "An Memo\n To: Supervisors\nFrom: Judy Linquiest, Human Resource Manager\nSub: Probation periods\n\nAs of January 1st all new employees will be subject to a 3 month probationary period. Medical, holiday, and flextime benefits will not apply to new staff members until the full 3 months have expired.\n After the three months have been completed, please contact your employees and inform them that their probationary period has ended. The HR department will contact you by email 2 days in advance to remind you of the date.\nThank you for your cooperation.",
         "priorities": 1,
         "type": "6",
         "status": "1",
         "groupid": 1,
-        "ui_type": "1",
-        "att_code": "QUESTION_CONTENT"
-      }
-    ],
-    "questionid": 16,
-    "question_name": "Start tourReading",
-    "illustrate_img_path": "",
-    "img_path": "",
-    "video_path": "",
-    "audio_path": "",
-    "status": "1",
-    "type": "6",
-    "answer_type": "4",
-    "answer_num": 1,
-    "ui_type":'5'
-  },
-  {
-    "questionattributes": [
+        "ui_type": "1"
+      }];
+var data_17=[
       {
-        "id": 29,
+        "id": 2,
         "questionid": 17,
         "attributeid": 1,
+        "att_code": "QUESTION_CONTENT",
         "attribute_name": "Question content",
         "attribute_value": "What is the main purpose of this memo?",
         "priorities": 1,
         "type": "3",
         "status": "1",
         "groupid": 1,
-        "ui_type": "1",
-        "att_code": "QUESTION_CONTENT"
+        "ui_type": "1"
       },
       {
-        "id": 30,
-        "questionid": 17,
-        "attributeid": 1,
-        "attribute_name": "Question content",
-        "attribute_value": "To inform all employees of a new expiration date.",
-        "priorities": 2,
-        "type": "3",
-        "status": "1",
-        "groupid": 2,
-        "ui_type": "2",
-        "att_code": "QUESTION_CHOICE"
-      },
-      {
-        "id": 31,
-        "questionid": 17,
-        "attributeid": 1,
-        "attribute_name": "Question content",
-        "attribute_value": " To put staff members on probation.",
-        "priorities": 3,
-        "type": "3",
-        "status": "1",
-        "groupid": 2,
-        "ui_type": "2",
-        "att_code": "QUESTION_CHOICE"
-      },
-      {
-        "id": 32,
-        "questionid": 17,
-        "attributeid": 1,
-        "attribute_name": "Question content",
-        "attribute_value": "To introduce the HR department.",
-        "priorities": 4,
-        "type": "3",
-        "status": "1",
-        "groupid": 2,
-        "ui_type": "2",
-        "att_code": "QUESTION_CHOICE"
-      },
-      {
-        "id": 33,
-        "questionid": 17,
-        "attributeid": 1,
-        "attribute_name": "Question content",
-        "attribute_value": "To inform supervisors of a change in policy.",
-        "priorities": 5,
-        "type": "3",
-        "status": "1",
-        "groupid": 2,
-        "ui_type": "2",
-        "att_code": "QUESTION_CHOICE"
-      },
-      {
-        "id": 34,
+        "id": 7,
         "questionid": 17,
         "attributeid": 2,
+        "att_code": "ANSWER_CONTENT",
         "attribute_name": "Question answer",
         "attribute_value": "To inform supervisors of a change in policy.",
         "priorities": 1,
         "type": "2",
         "status": "1",
         "groupid": 2,
-        "ui_type": "1",
-        "att_code": "QUESTION_ANSWER"
+        "ui_type": "1"
+      },
+      {
+        "id": 3,
+        "questionid": 17,
+        "attributeid": 3,
+        "att_code": "QUESTION_CHOICE",
+        "attribute_name": "Question choice",
+        "attribute_value": "To inform all employees of a new expiration date.",
+        "priorities": 2,
+        "type": "3",
+        "status": "1",
+        "groupid": 2,
+        "ui_type": "2"
+      },
+      {
+        "id": 4,
+        "questionid": 17,
+        "attributeid": 3,
+        "att_code": "QUESTION_CHOICE",
+        "attribute_name": "Question choice",
+        "attribute_value": " To put staff members on probation.",
+        "priorities": 3,
+        "type": "3",
+        "status": "1",
+        "groupid": 2,
+        "ui_type": "2"
+      },
+      {
+        "id": 5,
+        "questionid": 17,
+        "attributeid": 3,
+        "att_code": "QUESTION_CHOICE",
+        "attribute_name": "Question choice",
+        "attribute_value": "To introduce the HR department.",
+        "priorities": 4,
+        "type": "3",
+        "status": "1",
+        "groupid": 2,
+        "ui_type": "2"
+      },
+      {
+        "id": 6,
+        "questionid": 17,
+        "attributeid": 3,
+        "att_code": "QUESTION_CHOICE",
+        "attribute_name": "Question choice",
+        "attribute_value": "To inform supervisors of a change in policy.",
+        "priorities": 5,
+        "type": "3",
+        "status": "1",
+        "groupid": 2,
+        "ui_type": "2"
       }
-    ],
-    "questionid": 17,
-    "question_name": "Start tourReading -  Question",
-    "illustrate_img_path": "",
-    "img_path": "",
-    "video_path": "",
-    "audio_path": "",
-    "status": "1",
-    "type": "6",
-    "answer_type": "",
-    "answer_num": 1,
-    "ui_type":'6'
-  }
-]
+
+];

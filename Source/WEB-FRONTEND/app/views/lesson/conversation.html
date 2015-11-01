@@ -1,0 +1,33 @@
+<div class="container-fluid conversion-lesion">
+  <div class="col-sm-9">
+    <div class="panel panel-primary">
+      <div class="panel-body" style="height:300px;overflow-y: scroll">
+         <table class="table table-striped">
+           <tbody>
+             <tr ng-repeat="sentence in question">
+               <td ng-class="{icon:1===1,'sentence-playing':$index===playingIndex}" id="{{'sentence-'+$index}}">
+                 <img ng-if="sentence.playerid!=chosenPlayerId" src="images/icons/message.png"/>
+                 <img ng-if="sentence.playerid==chosenPlayerId" src="images/icons/user.png"/>
+               </td>
+               <td>
+                 {{sentence.audio_text}}
+               </td>
+             </tr>
+           </tbody>
+         </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3 control-icon">
+    <div style="min-height:50%;vertical-align:middle">
+      CHART IN HERE
+    </div>
+    <div height="50%" style="vertical-align:middle">
+      <a href=""><img src="images/icons/play.png" ng-click="playConversation(0,question)"></a>
+      <a href=""><img src="images/icons/recorder.png"></a>
+      <span style="color : red">Talked : {{textTalked}}</span>
+    </div>
+
+  </div>
+
+</div>

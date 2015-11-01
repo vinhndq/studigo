@@ -28,14 +28,27 @@
     </div>
     <div class="col-sm-10">
       <div class="row" >
-        <textarea class="col-sm-12 data-input"></textarea>
+        <textarea id ="input_answer" class="col-sm-12 data-input"></textarea>
       </div>
       <div class="row">
 
-        <button class="btn btn-info" ng-repeat="suggestion in question.suggestList" >{{suggestion}}</button>
+        <button class="btn btn-info" style="margin-right:5px" ng-repeat="suggestion in question.suggestList" value="{{suggestion}}" onClick="appendValueToComponent(this,this.value)">{{suggestion}}</button>
 
 
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  function setValue(value)
+  {
+    var data = $('#input_answer').val();
+    if(data===null)
+    {
+      data = '';
+    }
+    data=data+' '+value;
+    $('#input_answer').val(data);
+  }
+</script>

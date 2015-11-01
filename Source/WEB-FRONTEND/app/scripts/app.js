@@ -37,7 +37,7 @@ angular
                 controllerAs: 'reg'
       })
       .when('/start-tour/', {
-                controller: 'StartTourCtrl',
+                controller: 'LessonCtrl',
                 templateUrl: 'views/start-tour.html',
                 controllerAs: 'startTour'
       })
@@ -74,6 +74,7 @@ angular
           var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
           console.log('path:'+$location.path());
           var isStartTour = $location.path().toLowerCase().indexOf('start-tour')>0;
+          $rootScope.isStartTour = isStartTour;
           var loggedIn = $rootScope.globals.currentUser;
           if (restrictedPage && !loggedIn&&!isStartTour) {
               $location.path('/welcome');

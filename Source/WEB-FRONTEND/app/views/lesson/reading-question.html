@@ -4,11 +4,7 @@
   </p>
   <div style="padding-left:20px">
     <div class="row" ng-repeat="choice in question.choiceList">
-      <div class="circle">
-        {{$index+1}}
-      </div>
-      <div>
-        {{choice}}
+        {{$index+1}}&nbsp;&nbsp;{{choice}}
       </div>
     </div>
     <div class="row align-bottom" onclick="readAgain()" style="font-size:24px;font-color:inherit" onmouseover="this.style.font-color='gray';" onmouseout="this.style.font-color='inherit';">

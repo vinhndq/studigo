@@ -14,8 +14,7 @@ function convertToWord(question,sce)
   for(i=0;i<question.questionattributes.length;i++)
   {
     var att = question.questionattributes[i];
-    console.log("ATT"+i);
-    console.log(att);
+    att.attribute_value = sce.trustAsHtml(att.attribute_value);
     if(att.att_code ===ATTR_QUESTION_CONTENT )
     {
       word.word_content=(word.word_content+"<br/>"+att.attribute_value);
@@ -24,7 +23,7 @@ function convertToWord(question,sce)
   word.word_content = sce.trustAsHtml(word.word_content);
   return word;
 }
-function convertToWordSound(question)
+function convertToWordSound(question,sce)
 {
   var word = {
     "video_path":'',
@@ -34,6 +33,7 @@ function convertToWordSound(question)
   for(var i=0;i<question.questionattributes.length;i++)
   {
     var att = question.questionattributes[i];
+    att.attribute_value = sce.trustAsHtml(att.attribute_value);
     if(att.att_code ===ATTR_QUESTION_CONTENT )
     {
       word.question_content=att.attribute_value;
@@ -42,32 +42,25 @@ function convertToWordSound(question)
 
   return word;
 }
-function convertToConversation(question)
+function convertToConversation(question,sce)
 {
-  var conversation = {
-    "sentence":[
-      {
-        "text":"",
-        "audio":"",
-        "recording":""
-      },
-      {
-        "text":"",
-        "audio":"",
-        "recording":""
-      },
-      {
-        "text":"",
-        "audio":"",
-        "recording":""
-      }
-    ]
-  };
-
+  var conversation = [];
+  for(i=0;i<question.questionattributes.length;i++)
+  {
+    var att = question.questionattributes[i];
+    var sentence = {};
+    sentence.audio_text = att.attribute_value;
+    sentence.audio_path = att.audio_path;
+    sentence.record="";
+    sentence.wait_time = att.wait_time;
+    sentence.playerid = att.playerid;
+    sentence.answer = att.answer_text;
+    conversation.push(sentence);
+  }
   return conversation;
 }
 
-function convertToListen(question)
+function convertToListen(question,sce)
 {
   var data={
     "audio":'',
@@ -82,22 +75,24 @@ function convertToListen(question)
   data.description = question.question_name;
   for(i=0;i<question.questionattributes.length;i++)
   {
-    if(question.questionattributes[i].att_code===ATTR_QUESTION_CONTENT)
+    var att = question.questionattributes[i];
+    att.attribute_value = sce.trustAsHtml(att.attribute_value);
+    if(att.att_code===ATTR_QUESTION_CHOICE)
     {
-      data.suggestList.push(question.questionattributes[i].attribute_value);
+      data.suggestList.push(att.attribute_value);
 
     }
-    else if(question.questionattributes[i].att_code===ATTR_QUESTION_ANSWER)
+    else if(att.att_code===ATTR_QUESTION_ANSWER)
     {
-      data.right_answer.push(question.questionattributes[i].attribute_value);
+      data.right_answer.push(att.attribute_value);
     }
   }
 
-  console.log(data.suggestList);
+
   return data;
 }
 
-function convertToReadParagraph(question)
+function convertToReadParagraph(question,sce)
 {
   var data={
     "description":'',
@@ -107,12 +102,13 @@ function convertToReadParagraph(question)
   data.description = question.question_name;
   if(question.questionattributes!=null && question.questionattributes.length>0)
   {
-    data.question_content = question.questionattributes[0].attribute_value;
+    var att = question.questionattributes[0];
+    data.question_content = sce.trustAsHtml(att.attribute_value);
   }
   return data;
 }
 
-function convertToReadAndQuestion(question)
+function convertToReadAndQuestion(question,sce)
 {
   var data = {
     "question_content":'',
@@ -125,20 +121,22 @@ function convertToReadAndQuestion(question)
   }
   for(var i=0;i<question.questionattributes.length;i++)
   {
-    if(question.questionattributes[i].att_code===ATTR_QUESTION_CHOICE)
+    var att = question.questionattributes[i];
+    att.attribute_value = sce.trustAsHtml(att.attribute_value);
+    if(att.att_code===ATTR_QUESTION_CHOICE)
     {
-      data.choiceList.push(question.questionattributes[i].attribute_value);
+      data.choiceList.push(att.attribute_value);
 
     }
-    else if(question.questionattributes[i].att_code===ATTR_QUESTION_ANSWER)
+    else if(att.att_code===ATTR_QUESTION_ANSWER)
     {
-      data.right_answer.push(question.questionattributes[i].attribute_value);
+      data.right_answer.push(att.attribute_value);
     }
-    else if(question.questionattributes[i].att_code===ATTR_QUESTION_CONTENT)
+    else if(att.att_code===ATTR_QUESTION_CONTENT)
     {
-      data.question_content=question.questionattributes[i].attribute_value;
+      data.question_content=att.attribute_value;
     }
   }
-  console.log(data.choiceList);
+
   return data;
 }

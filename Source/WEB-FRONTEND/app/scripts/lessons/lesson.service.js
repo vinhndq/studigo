@@ -8,7 +8,7 @@
   function LessonService($http)
   {
     var service={};
-    service.GetLessonInfo = GetLesson;
+    service.GetLessonInfo = GetLessonInfo;
     service.GetLessons = GetLessons;
     service.GetUnits = GetUnits;
     service.GetUnitInfo = GetUnitInfo;
